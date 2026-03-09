@@ -1,0 +1,54 @@
+"use client";
+import Layout from "@/components/Layout";
+import Tag from "@/components/Tag";
+import React from "react";
+import { Slide } from "react-awesome-reveal";
+
+import bg from "@/assets/jr-recycling-workers.jpg";
+import Partners from "@/sections/Partners";
+import Link from "next/link";
+import ButtonContactUs from "@/components/ButtonContactUs";
+import Image from "next/image";
+
+function AboutUs() {
+  return (
+    <div className="">
+      <Layout
+        title="Construction & Dismantle"
+        bg={`https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/jr-recycling-pic-5.jpg`}
+      />
+      <section className="px-[6%] transition-all space-x-[20px] py-[3%] flex laptop:flex-row mobile:flex-col place-items-start">
+        <div className="mobile:w-full laptop:w-[50%] transition-all h-auto">
+          <Slide>
+            <Tag tag="Construction & Dismantle" />
+            <div className="mt-[20px]">
+              {/* <p className="text-[60px] font-bold text-black leading-[65px]">
+              JR Recycling Solutions Ltd
+            </p> */}
+              <h2 className="font-lato text-[22px] mt-[30px] text-black/60">
+                We construct & dismantle all types of Telecommunications towers.
+              </h2>
+            </div>
+            <ButtonContactUs />
+          </Slide>
+        </div>
+        <div className="relative laptop:flex mobile:hidden w-[50%] ">
+          <Slide triggerOnce direction="up">
+            <Image
+              loading="eager"
+              height={400}
+              width={400}
+              alt=""
+              src="https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/construction.jpg"
+            />
+          </Slide>
+        </div>
+      </section>
+      <section className="py-[70px]">
+        <Partners cusIndex={2} />
+      </section>
+    </div>
+  );
+}
+
+export default AboutUs;
