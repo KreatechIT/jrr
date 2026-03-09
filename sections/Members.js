@@ -85,12 +85,12 @@ function Members() {
       title: "Md. Manzoor Hasan",
       post: "General Manager (Operation)",
     },
-    {
-      image:
-        "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Manager_IT.png",
-      title: "Md. Shahjahan Miah",
-      post: "Manager, IT",
-    },
+    // {
+    //   image:
+    //     "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Manager_IT.png",
+    //   title: "Md. Shahjahan Miah",
+    //   post: "Manager, IT",
+    // },
     {
       image:
         "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Manager_SCM.png",
