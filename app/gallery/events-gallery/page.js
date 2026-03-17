@@ -54,252 +54,79 @@ function Page() {
   }, [baseUrl]);
 
   const Images = [
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/23.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/22.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/21.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/20.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/19.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/18.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/17.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/16.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/15.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/14.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/13.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/12.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/11.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/10.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/9.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/8.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/7.jpg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/6.jpg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/5.jpg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/4.jpg",
-    },
-
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/3.jpg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/2.jpg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/1.jpg",
-    },
+    { title: "", url: "/gallery/23.jpeg" },
+    { title: "", url: "/gallery/22.jpeg" },
+    { title: "", url: "/gallery/21.jpeg" },
+    { title: "", url: "/gallery/20.jpeg" },
+    { title: "", url: "/gallery/19.jpeg" },
+    { title: "", url: "/gallery/18.jpeg" },
+    { title: "", url: "/gallery/17.jpeg" },
+    { title: "", url: "/gallery/16.jpeg" },
+    { title: "", url: "/gallery/15.jpeg" },
+    { title: "", url: "/gallery/14.jpeg" },
+    { title: "", url: "/gallery/13.jpeg" },
+    { title: "", url: "/gallery/12.jpeg" },
+    { title: "", url: "/gallery/11.jpeg" },
+    { title: "", url: "/gallery/10.jpeg" },
+    { title: "", url: "/gallery/9.jpeg" },
+    { title: "", url: "/gallery/8.jpeg" },
+    { title: "", url: "/gallery/7.jpg" },
+    { title: "", url: "/gallery/6.jpg" },
+    { title: "", url: "/gallery/5.jpg" },
+    { title: "", url: "/gallery/4.jpg" },
+    { title: "", url: "/gallery/3.jpg" },
+    { title: "", url: "/gallery/2.jpg" },
+    { title: "", url: "/gallery/1.jpg" },
   ];
 
   const ImagesTwo = [
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/26.jpg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/25.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/24.jpeg",
-    },
+    { title: "", url: "/gallery/26.jpg" },
+    { title: "", url: "/gallery/25.jpeg" },
+    { title: "", url: "/gallery/24.jpeg" },
   ];
 
   const ImagesThree = [
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/15-1.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/14-1.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/13-1.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/12-1.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/11-1.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/10-1.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/9-1.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/8-1.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/7.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/6.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/5.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/4.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/3.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/2.jpeg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/1.jpeg",
-    },
+    { title: "", url: "/gallery/15-1.jpeg" },
+    { title: "", url: "/gallery/14-1.jpeg" },
+    { title: "", url: "/gallery/13-1.jpeg" },
+    { title: "", url: "/gallery/12-1.jpeg" },
+    { title: "", url: "/gallery/11-1.jpeg" },
+    { title: "", url: "/gallery/10-1.jpeg" },
+    { title: "", url: "/gallery/9-1.jpeg" },
+    { title: "", url: "/gallery/8-1.jpeg" },
+    { title: "", url: "/gallery/7.jpeg" },
+    { title: "", url: "/gallery/6.jpeg" },
+    { title: "", url: "/gallery/5.jpeg" },
+    { title: "", url: "/gallery/4.jpeg" },
+    { title: "", url: "/gallery/3.jpeg" },
+    { title: "", url: "/gallery/2.jpeg" },
+    { title: "", url: "/gallery/1.jpeg" },
   ];
 
   const ImagesFour = [
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/05/IMG-20240514-WA0005.jpg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/05/IMG-20240514-WA0004.jpg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/05/IMG-20240514-WA0003.jpg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/05/IMG-20240514-WA0002.jpg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/05/IMG-20240514-WA0017.jpg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/05/IMG-20240514-WA0016.jpg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/05/IMG-20240514-WA0015.jpg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/05/IMG-20240514-WA0014.jpg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/05/IMG-20240514-WA0013.jpg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/05/IMG-20240514-WA0012.jpg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/05/IMG-20240514-WA0011.jpg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/05/IMG-20240514-WA0010.jpg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/05/IMG-20240514-WA0009.jpg",
-    },
-
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/05/IMG-20240514-WA0008.jpg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/05/IMG-20240514-WA0007.jpg",
-    },
-    {
-      title: "",
-      url: "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/05/IMG-20240514-WA0006.jpg",
-    },
+    { title: "", url: "/events/IMG-20240514-WA0005.jpg" },
+    { title: "", url: "/events/IMG-20240514-WA0004.jpg" },
+    { title: "", url: "/events/IMG-20240514-WA0003.jpg" },
+    { title: "", url: "/events/IMG-20240514-WA0002.jpg" },
+    { title: "", url: "/events/IMG-20240514-WA0017.jpg" },
+    { title: "", url: "/events/IMG-20240514-WA0016.jpg" },
+    { title: "", url: "/events/IMG-20240514-WA0015.jpg" },
+    { title: "", url: "/events/IMG-20240514-WA0014.jpg" },
+    { title: "", url: "/events/IMG-20240514-WA0013.jpg" },
+    { title: "", url: "/events/IMG-20240514-WA0012.jpg" },
+    { title: "", url: "/events/IMG-20240514-WA0011.jpg" },
+    { title: "", url: "/events/IMG-20240514-WA0010.jpg" },
+    { title: "", url: "/events/IMG-20240514-WA0009.jpg" },
+    { title: "", url: "/events/IMG-20240514-WA0008.jpg" },
+    { title: "", url: "/events/IMG-20240514-WA0007.jpg" },
+    { title: "", url: "/events/IMG-20240514-WA0006.jpg" },
   ];
 
   return (
     <div className="">
       <Layout
         title="Events Gallery"
-        bg={`https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/9.jpeg`}
+        bg="/backgrounds/9.jpeg"
       />
       <section className="px-[5%] mt-[40px] transition-all  flex flex-col justify-center items-center place-items-start">
         <div className="w-[100%] px-[10px] transition-all h-auto">

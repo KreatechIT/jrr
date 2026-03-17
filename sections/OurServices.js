@@ -8,48 +8,42 @@ const Services = [
   {
     path: "/services/e-waste-recycling",
     id: "01",
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/recycling.png",
+    image: "/logos/recycling.png",
     title: ["E-Waste", "Recycling"],
     desc: "We are one of the number one E-Waste Management Company in Bangladesh...",
   },
   {
     path: "/services/demandandsupply",
     id: "02",
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/customer.png",
+    image: "/logos/customer.png",
     title: ["Demand and", "Supply"],
     desc: "We are specialized in accelerating and optimizing IT product, food & feed and...",
   },
   {
     path: "/services/data-destructions",
     id: "03",
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/data.png",
+    image: "/logos/data.png",
     title: ["Data", "Destructions"],
     desc: "TWe are only in the country to provide you the most secure Data Destruction...",
   },
   {
     path: "/services/construction-dismantle",
     id: "04",
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/construction.png",
+    image: "/logos/construction.png",
     title: ["Construction", "& Dismantle"],
     desc: "Our trained team Construct & Dismantle all kinds of telecom network...",
   },
   {
     path: "/services/green-truck",
     id: "05",
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/garbage-truck2.png",
+    image: "/logos/garbage-truck2.png",
     title: ["Green", "Truck"],
     desc: "Our green truck is ready to serve 24/7. We collect e-waste from your location...",
   },
   {
     path: "/services/it-asset-disposition-refurbishment",
     id: "06",
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/computer.png",
+    image: "/logos/computer.png",
     title: ["IT Asset", "Disposition"],
     desc: "We provide secure data disposition & refurbishment of your outdated...",
   },

@@ -12,7 +12,7 @@ function AboutUs() {
     <div className="">
       <Layout
         title="E-Waste Recycling"
-        bg={`https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/jr-recycling-pic-4.jpg`}
+        bg="/services/jr-recycling-pic-4.jpg"
       />
       <section className="px-[5%] transition-all py-[3%] flex laptop:flex-row mobile:flex-col-reverse place-items-start">
         <div className="laptop:w-[50%] mobile:w-full transition-all h-auto">
@@ -45,7 +45,7 @@ function AboutUs() {
               alt=""
               height={400}
               width={400}
-              src="https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/ewaste-management.png"
+              src="/services/ewaste-management.png"
             />
           </Slide>
         </div>

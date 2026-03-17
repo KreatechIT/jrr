@@ -15,7 +15,7 @@ function AboutUs() {
     <div className="">
       <Layout
         title="Construction & Dismantle"
-        bg={`https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/jr-recycling-pic-5.jpg`}
+        bg="/services/jr-recycling-pic-5.jpg"
       />
       <section className="px-[6%] transition-all space-x-[20px] py-[3%] flex laptop:flex-row mobile:flex-col place-items-start">
         <div className="mobile:w-full laptop:w-[50%] transition-all h-auto">
@@ -39,7 +39,7 @@ function AboutUs() {
               height={400}
               width={400}
               alt=""
-              src="https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/construction.jpg"
+              src="/services/construction.jpg"
             />
           </Slide>
         </div>

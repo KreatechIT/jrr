@@ -13,7 +13,7 @@ function AboutUs() {
     <div className="">
       <Layout
         title="Green Truck"
-        bg={`https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/What-Can-Bangladeshi-Companies-Do-To-Ensure-Secure-Data-Destruction.jpg`}
+        bg="/services/What-Can-Bangladeshi-Companies-Do-To-Ensure-Secure-Data-Destruction.jpg"
       />
       <section className="px-4 transition-all py-[3%]">
         <div className="relative justify-center items-center tablet:w-[50%] flex mx-auto">
@@ -23,7 +23,7 @@ function AboutUs() {
               alt=""
               height={400}
               width={400}
-              src="https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/green-truck.webp"
+              src="/services/green-truck.webp"
             />
           </Slide>
         </div>

@@ -43,7 +43,7 @@ function Page() {
     <div className="flex flex-col place-content-center place-items-center">
       <Layout
         title="Blog"
-        bg={`https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/16.jpeg`}
+        bg="/backgrounds/16.jpeg"
       />
       <section className="py-[5%] px-[5%]">
         {posts.length !== 0 || !loading ? (

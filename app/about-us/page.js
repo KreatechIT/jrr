@@ -16,7 +16,7 @@ function AboutUs() {
     <div className="">
       <Layout
         title="About Us"
-        bg={`https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/05/09.jpg`}
+        bg="/backgrounds/09.jpg"
       />
       <section className="p-[5%] flex laptop:flex-row mobile:flex-col place-items-start">
         <div className="relative mb-[70px] laptop:w-[50%] mobile:w-full mobile:h-[400px] laptop:h-[700px]">
@@ -29,7 +29,7 @@ function AboutUs() {
               loading="eager"
               alt=""
               layout="fill"
-              src="https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/abbanner.jpg"
+              src="/backgrounds/abbanner.jpg"
             />
           </Slide>
           <Slide
@@ -42,7 +42,7 @@ function AboutUs() {
               alt=""
               layout="fill"
               className="rounded-full"
-              src="https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/ghgghghj.jpg"
+              src="/backgrounds/ghgghghj.jpg"
             />
           </Slide>
         </div>
@@ -213,7 +213,7 @@ function AboutUs() {
         {/* Image Above Footer */}
         <Image
           className="laptop:w-[50%] mobile:w-full h-[17%] laptop:mt-0 mobile:mt-[30px]"
-          src="https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/2-3.jpg"
+          src="/backgrounds/2-3.jpg"
           alt="jr recycling sigining ceremony"
           width={500}
           height={350}

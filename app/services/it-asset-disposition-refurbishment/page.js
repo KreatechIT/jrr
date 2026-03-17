@@ -9,56 +9,16 @@ import Image from "next/image";
 import ButtonContactUs from "@/components/ButtonContactUs";
 
 const Items = [
-  {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/servers.webp",
-    title: "Servers",
-  },
-  {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/storage.webp",
-    title: "Storage",
-  },
-  {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/broadband.webp",
-    title: "Broadband",
-  },
-  {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/laptop.webp",
-    title: "Laptop",
-  },
-  {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/desktop.webp",
-    title: "Desktop",
-  },
-  {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/monitor.webp",
-    title: "Monitor",
-  },
-  {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/circuit.webp",
-    title: "Circuit",
-  },
-  {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/printers.webp",
-    title: "Printer",
-  },
-  {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/projector.webp",
-    title: "Projector",
-  },
-  {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/keyboard.webp",
-    title: "Keyboard",
-  },
+  { image: "/services/servers.webp", title: "Servers" },
+  { image: "/services/storage.webp", title: "Storage" },
+  { image: "/services/broadband.webp", title: "Broadband" },
+  { image: "/services/laptop.webp", title: "Laptop" },
+  { image: "/services/desktop.webp", title: "Desktop" },
+  { image: "/services/monitor.webp", title: "Monitor" },
+  { image: "/services/circuit.webp", title: "Circuit" },
+  { image: "/services/printers.webp", title: "Printer" },
+  { image: "/services/projector.webp", title: "Projector" },
+  { image: "/services/keyboard.webp", title: "Keyboard" },
 ];
 
 function AboutUs() {
@@ -66,7 +26,7 @@ function AboutUs() {
     <div className="">
       <Layout
         title="IT Asset Disposition & Refurbishment"
-        bg={`https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/1-1.jpg`}
+        bg="/projects/1-1.jpg"
       />
       <section className="px-[5%] mt-[20px] transition-all space-x-[20px] py-[3%] flex laptop:flex-row mobile:flex-col place-items-start">
         <div className="laptop:w-[50%] mobile:w-full transition-all h-auto">
@@ -90,7 +50,7 @@ function AboutUs() {
               alt=""
               height={400}
               width={400}
-              src="https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/it-disposal.jpg"
+              src="/services/it-disposal.jpg"
             />
           </Slide>
         </div>

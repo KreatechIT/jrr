@@ -62,7 +62,7 @@ function ContactUs() {
     <div className="flex flex-col place-content-center place-items-center">
       <Layout
         title="Contact Us"
-        bg={`https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/17.jpeg`}
+        bg="/backgrounds/17.jpeg"
       />
       <section className="py-[5%] px-[3%]">
         <div className="flex laptop:flex-row mobile:flex-col place-items-center mobile:space-y-[30px] laptop:space-y-0 mobile:space-x-0 laptop:space-x-[30px]">
