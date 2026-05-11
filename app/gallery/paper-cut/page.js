@@ -9,7 +9,7 @@ function Page() {
     <div className="">
       <Layout
         title="Paper Cut"
-        bg={`https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/profile_show.jpg`}
+        bg="/backgrounds/profile_show.jpg"
       />
 
       <section className="px-[5%] transition-all flex flex-col justify-center items-center place-items-start">

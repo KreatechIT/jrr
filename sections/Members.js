@@ -62,20 +62,17 @@ function Members() {
 
   const Items = [
     {
-      image:
-        "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Manging-Director.png",
+      image: "/team/Manging-Director.png",
       title: "M A Hossain",
       post: "Managing Director",
     },
     {
-      image:
-        "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Director_Finance.png",
+      image: "/team/Director_Finance.png",
       title: "Shaheda Amir",
       post: "Director, Accounts & Finance",
     },
     {
-      image:
-        "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Director.png",
+      image: "/team/Director.png",
       title: "Iftiakh Hossain",
       post: "Director, Business Development",
     },
@@ -86,14 +83,12 @@ function Members() {
     //   post: "General Manager (Operation)",
     // },
     // {
-    //   image:
-    //     "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Manager_IT.png",
+    //   image: "/team/Manager_IT.png",
     //   title: "Md. Shahjahan Miah",
     //   post: "Manager, IT",
     // },
     {
-      image:
-        "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Manager_SCM.png",
+      image: "/team/Manager_SCM.png",
       title: "Md. Monirul Islam",
       post: "Manager, SCM",
     },
@@ -104,14 +99,12 @@ function Members() {
     //   post: "Assistant Manager, Business Development & Digital Marketing",
     // },
     {
-      image:
-        "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Officer.png",
+      image: "/team/Officer.png",
       title: "Farzana Khanam",
       post: "Officer, Accounts & Finance",
     },
     {
-      image:
-        "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Engineer.png",
+      image: "/team/Engineer.png",
       title: "Nakib Uddin Rasu",
       post: "Engineer, Warehouse",
     },

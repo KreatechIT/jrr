@@ -8,74 +8,61 @@ import Image from "next/image";
 
 const Items = [
   {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/07/R2_2013_Renewed-2025-scaled.jpeg",
+    image: "/certifications/R2_2013_Renewed-2025-scaled.jpeg",
   },
   {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/07/ISO45001_CERT-J-R-RECYCLING-SOLUTIONS-LIMITED-S-1-1-scaled.jpeg",
+    image: "/certifications/ISO45001_CERT-J-R-RECYCLING-SOLUTIONS-LIMITED-S-1-1-scaled.jpeg",
   },
   {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/07/ISO27001_Cert-J-R-RECYCLING-SOLUTIONS-LIMITED_2022-scaled.jpeg",
+    image: "/certifications/ISO27001_Cert-J-R-RECYCLING-SOLUTIONS-LIMITED_2022-scaled.jpeg",
   },
   {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/07/ISO14001_CERT-J-R-RECYCLING-SOLUTIONS-LIMITED-S-1-scaled.jpeg",
+    image: "/certifications/ISO14001_CERT-J-R-RECYCLING-SOLUTIONS-LIMITED-S-1-scaled.jpeg",
   },
   {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/07/ISO9001_CERT-J-R-RECYCLING-SOLUTIONS-LIMITED-S-1-scaled.jpeg",
+    image: "/certifications/ISO9001_CERT-J-R-RECYCLING-SOLUTIONS-LIMITED-S-1-scaled.jpeg",
   },
 ];
 
 const Permissions = [
   {
     title: "Bangladesh Telecommunication Regulatory Commission",
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/btrc.png",
+    image: "/logos/btrc.png",
     alt: "btrc-logo",
   },
   {
     title: "Ministry of PT&T",
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/mis.png",
+    image: "/logos/mis.png",
     alt: "National -security-intelligence-logo",
   },
   {
     title: "Bangladesh Atomic Energy Commission",
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/baec.png",
+    image: "/logos/baec.png",
     alt: "bangladesh-poromanu-sokti-commission-logo",
   },
   {
     title: "Ministry of Science and Technology",
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Bangladesh-goverenment.png",
+    image: "/logos/Bangladesh-goverenment.png",
     alt: "Bangladesh-govermenment -logo",
   },
   {
     title: "National Security Intelligence",
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/nci.png",
+    image: "/logos/nci.png",
     alt: "National -security-intelligence-logo",
   },
   {
     title: "Bangladesh Police",
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Bangladesh-police.png",
+    image: "/logos/Bangladesh-police.png",
     alt: "Police-logo",
   },
   {
     title: "Directorate General Forces Intelligence",
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/DFI.png",
+    image: "/logos/DFI.png",
     alt: "Directorate-general-of-forces-intelligence-logo",
   },
   {
     title: "Ministry of Defense of Bangladesh",
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/MINISTRY-OF-Diffence-of-bangladesh.png",
+    image: "/logos/MINISTRY-OF-Diffence-of-bangladesh.png",
     alt: "Ministry-of-diffence-of-bangladesh",
   },
 ];
@@ -83,26 +70,22 @@ const Permissions = [
 const Membership = [
   {
     title: "DCCI",
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/dcci.png",
+    image: "/logos/dcci.png",
     alt: "dcci-logo",
   },
   {
     title: "Lions International",
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/lions.png",
+    image: "/logos/lions.png",
     alt: "lions-international-logo",
   },
   {
     title: "BASIS",
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/basis.png",
+    image: "/logos/basis.png",
     alt: "basis-logo",
   },
   {
     title: "BCS",
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/bcs.png",
+    image: "/logos/bcs.png",
     alt: "Bangladesh-computer-somity-logo",
   },
 ];
@@ -112,7 +95,7 @@ function Page() {
     <div className="">
       <Layout
         title="Certifications"
-        bg={`https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/certificate.jpg`}
+        bg="/backgrounds/certificate.jpg"
       />
       <section className="p-[5%] mx-auto flex justify-center items-center">
         <div>

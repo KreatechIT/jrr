@@ -7,23 +7,19 @@ import Link from "next/link";
 function Projects() {
   const Items = [
     {
-      image:
-        "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/1-1.jpg",
+      image: "/projects/1-1.jpg",
       text: "Dismantle & Completion report on Old/Unused/Obsolete/Scrap of Bangladesh Police Telecom.",
     },
     {
-      image:
-        "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/3-1.jpg",
+      image: "/projects/3-1.jpg",
       text: "E-waste dismantle process going on for Bangladesh RAB.",
     },
     {
-      image:
-        "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/2-1.jpg",
+      image: "/projects/2-1.jpg",
       text: "Memorandum of Understanding(MOU) signing moment with VIVO Bangladesh for e-waste management",
     },
     {
-      image:
-        "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/4-1.jpg",
+      image: "/projects/4-1.jpg",
       text: "MOU ceremony with Grameen Distribution Ltd for their future E-waste management.",
     },
   ];

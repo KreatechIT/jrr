@@ -15,7 +15,7 @@ function AboutUs() {
     <div className="">
       <Layout
         title="Internship"
-        bg={`https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/05/WhatsApp-Image-2022-08-28-at-5.29.42-PM-1024x768-1.jpeg`}
+        bg="/services/WhatsApp-Image-2022-08-28-at-5.29.42-PM-1024x768-1.jpeg"
       />
       <section className="px-[6%] transition-all space-x-[20px] py-[3%] flex laptop:flex-row mobile:flex-col place-items-start">
         <div className="mobile:w-full laptop:w-[50%] transition-all h-auto">
@@ -42,7 +42,7 @@ function AboutUs() {
               height={500}
               width={500}
               alt=""
-              src="https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/05/WhatsApp-Image-2022-08-28-at-5.29.43-PM.jpeg"
+              src="/services/WhatsApp-Image-2022-08-28-at-5.29.43-PM.jpeg"
             />
           </Slide>
         </div>

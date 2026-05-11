@@ -78,7 +78,7 @@ function Page() {
     <div className="">
       <Layout
         title="Video Gallery"
-        bg={`https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/13.jpeg`}
+        bg="/backgrounds/13.jpeg"
       />
       <section className="px-[5%] transition-all flex flex-col justify-center items-center place-items-start">
         <div className="w-[100%] px-[10px] transition-all h-auto">

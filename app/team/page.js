@@ -6,20 +6,17 @@ import { Fade, Slide } from "react-awesome-reveal";
 
 const Items = [
   {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Manging-Director.png",
+    image: "/team/Manging-Director.png",
     title: "M A Hossain",
     post: "Managing Director",
   },
   {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Director_Finance.png",
+    image: "/team/Director_Finance.png",
     title: "Shaheda Amir",
     post: "Director, Accounts & Finance",
   },
   {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Director.png",
+    image: "/team/Director.png",
     title: "Iftiakh Hossain",
     post: "Director, Business Development",
   },
@@ -30,14 +27,12 @@ const Items = [
   //   post: "General Manager (Operation)",
   // },
   // {
-  //   image:
-  //     "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Manager_IT.png",
+  //   image: "/team/Manager_IT.png",
   //   title: "Md. Shahjahan Miah",
   //   post: "Manager, IT",
   // },
   {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Manager_SCM.png",
+    image: "/team/Manager_SCM.png",
     title: "Md. Monirul Islam",
     post: "Manager, SCM",
   },
@@ -48,14 +43,12 @@ const Items = [
   //   post: "Assistant Manager, Business Development & Digital Marketing",
   // },
   {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Officer.png",
+    image: "/team/Officer.png",
     title: "Farzana Khanam",
     post: "Officer, Accounts & Finance",
   },
   {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Engineer.png",
+    image: "/team/Engineer.png",
     title: "Nakib Uddin Rasu",
     post: "Engineer, Warehouse",
   },
@@ -63,8 +56,7 @@ const Items = [
 
 const Workers = [
   {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Md.Arif_.png",
+    image: "/team/Md.Arif_.png",
     title: "Md. Arif",
     department: "Heavy Loaded Equipment",
     experience: 10,
@@ -72,8 +64,7 @@ const Workers = [
       "Banglalink, BSL (Hotel Sheraton), Ericsson, Banglalion, EDotco, Bangladesh Railway, Roads & Highways",
   },
   {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/2-2.jpg",
+    image: "/team/2-2.jpg",
     title: "Haque Mia",
     department: "Gas Cuter",
     experience: 10,
@@ -81,8 +72,7 @@ const Workers = [
       "Banglalink, BSL (Hotel Sheraton), Ericsson, Banglalion, EDotco, Bangladesh Railway, Roads & Highways",
   },
   {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Tipu-Banik.jpg",
+    image: "/team/Tipu-Banik.jpg",
     title: "Tipu Pramanik",
     department: "Welding",
     experience: 12,
@@ -90,8 +80,7 @@ const Workers = [
       "Banglalink, BSL (Hotel Sheraton), Ericsson, Banglalion, EDotco, Bangladesh Railway, Roads & Highways",
   },
   {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Shohag-Mia.jpg",
+    image: "/team/Shohag-Mia.jpg",
     title: "Shohag Mia",
     department: "Grinding",
     experience: 8,
@@ -99,8 +88,7 @@ const Workers = [
       "Banglalink, BSL (Hotel Sheraton), Ericsson, Banglalion, EDotco, Bangladesh Railway, Roads & Highways",
   },
   {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Shohidul.jpg",
+    image: "/team/Shohidul.jpg",
     title: "Md. Shohidul Islam",
     department: "Dismantling",
     experience: 19,
@@ -108,8 +96,7 @@ const Workers = [
       "Banglalink, BSL (Hotel Sheraton), Ericsson, Banglalion, EDotco, Bangladesh Railway, Roads & Highways",
   },
   {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Abdul-Hamid.jpg",
+    image: "/team/Abdul-Hamid.jpg",
     title: "Abdul Hamid",
     department: "Mechanical Handling",
     experience: 9,
@@ -117,8 +104,7 @@ const Workers = [
       "Banglalink, BSL (Hotel Sheraton), Ericsson, Banglalion, EDotco, Bangladesh Railway, Roads & Highways",
   },
   {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Ashikuzzan.jpg",
+    image: "/team/Ashikuzzan.jpg",
     title: "Ashikuzzaman Mamun",
     department: "Manual Handling",
     experience: 8,
@@ -126,8 +112,7 @@ const Workers = [
       "Banglalink, BSL (Hotel Sheraton), Ericsson, Banglalion, EDotco, Bangladesh Railway, Roads & Highways",
   },
   {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Milton.jpg",
+    image: "/team/Milton.jpg",
     title: "Md. Milton Hossain",
     department: "Electric Works",
     experience: 16,
@@ -135,8 +120,7 @@ const Workers = [
       "Banglalink, BSL (Hotel Sheraton), Ericsson, Banglalion, EDotco, Bangladesh Railway, Roads & Highways",
   },
   {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Jashim-Uddin.jpg",
+    image: "/team/Jashim-Uddin.jpg",
     title: "Md. Jashim Uddin, Md. Alamgir Hossain",
     department: "Transportation",
     experience: 14.9,
@@ -152,9 +136,7 @@ function Page() {
     <div className="">
       <Layout
         title="Our Team"
-        bg={
-          "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/jr-enterprise.jpg"
-        }
+        bg="/team/jr-enterprise.jpg"
       />
       <section className="p-[3%] mt-[20px] mx-auto flex justify-center items-center">
         <div>

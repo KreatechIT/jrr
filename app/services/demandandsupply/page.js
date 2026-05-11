@@ -15,7 +15,7 @@ function AboutUs() {
     <div className="">
       <Layout
         title="Demand & Supply"
-        bg={`https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/jr-recycling-pic-8.jpg`}
+        bg="/services/jr-recycling-pic-8.jpg"
       />
       <section className="px-[5%] transition-all py-[3%] flex laptop:flex-row mobile:flex-col place-items-start">
         <div className="laptop:w-[50%] mobile:w-full transition-all h-auto">
@@ -45,7 +45,7 @@ function AboutUs() {
               height={400}
               width={400}
               alt=""
-              src="https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/demand-and-supply-chain.png"
+              src="/services/demand-and-supply-chain.png"
             />
           </Slide>
         </div>
