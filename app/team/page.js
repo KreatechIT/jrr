@@ -23,12 +23,12 @@ const Items = [
     title: "Iftiakh Hossain",
     post: "Director, Business Development",
   },
-  {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/General-Manager.png",
-    title: "Md. Manzoor Hasan",
-    post: "General Manager (Operation)",
-  },
+  // {
+  //   image:
+  //     "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/General-Manager.png",
+  //   title: "Md. Manzoor Hasan",
+  //   post: "General Manager (Operation)",
+  // },
   // {
   //   image:
   //     "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Manager_IT.png",
@@ -41,12 +41,12 @@ const Items = [
     title: "Md. Monirul Islam",
     post: "Manager, SCM",
   },
-  {
-    image:
-      "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/FD78786.png",
-    title: "Md Nazmul Hassan Nahid",
-    post: "Assistant Manager, Business Development & Digital Marketing",
-  },
+  // {
+  //   image:
+  //     "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/FD78786.png",
+  //   title: "Md Nazmul Hassan Nahid",
+  //   post: "Assistant Manager, Business Development & Digital Marketing",
+  // },
   {
     image:
       "https://blog.jrrecyclingsolutionsltd.com.bd/wp-content/uploads/2024/04/Officer.png",

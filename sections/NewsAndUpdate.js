@@ -126,7 +126,7 @@ function NewsAndUpdate() {
                   ></p>
                   <Link
                     href={{
-                      pathname: `/blog/${data.title.rendered}`,
+                      pathname: `/blog/${data.slug}`,
                       query: {
                         desc: data.excerpt.rendered,
                         title: data.title.rendered,
