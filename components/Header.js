@@ -206,7 +206,7 @@ const Header = () => {
                 height={300}
                 width={300}
                 className="h-full object-contain"
-                alt="jr-recycling-solution-ltd-logo"
+                alt="JR Recycling – Leading E-Waste Management Company in Bangladesh"
               />
             </Link>
           </div>
