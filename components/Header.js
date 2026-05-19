@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose, faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -80,23 +80,29 @@ const Header = () => {
   };
 
   const pathname = usePathname();
-  const [showSubsections, setShowSubsections] = useState({
-    second: false,
-    fifth: false,
-  });
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const navRef = useRef(null);
 
   const [showDrawer, setShowDrawer] = useState(false);
 
   useEffect(() => {
     setOpen(false);
     setShowDrawer(false);
+    setOpenDropdown(null);
   }, [pathname]);
 
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        setOpenDropdown(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   const toggleSubsections = (index) => {
-    setShowSubsections((prevState) => ({
-      ...prevState,
-      [index]: !prevState[index],
-    }));
+    setOpenDropdown((prev) => (prev === index ? null : index));
   };
 
   const toggleDrawer = () => {
@@ -150,7 +156,7 @@ const Header = () => {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className={`h-4 w-4 transform transition-transform duration-300 ${
-                    showSubsections[index] ? "rotate-180" : ""
+                    openDropdown === index ? "rotate-180" : ""
                   }`}
                   fill="none"
                   viewBox="0 0 24 24"
@@ -166,7 +172,7 @@ const Header = () => {
               </div>
             )}
           </div>
-          {data.subsections && showSubsections[index] && (
+          {data.subsections && openDropdown === index && (
             <div className="flex flex-col place-content-center place-items-center z-[1000] transition-all duration-300 bg-white text-[#39B54A]">
               {data.subsections.map((item, subIndex) => (
                 <Link
@@ -317,6 +323,7 @@ const Header = () => {
               </Fade>
             )}
             <div
+              ref={navRef}
               className={`flex w-full items-center space-x-[30px] uppercase text-sm ${
                 showDrawer ? "opacity-20" : "opacity-100"
               }`}
@@ -328,35 +335,42 @@ const Header = () => {
                 >
                   <div className="absolute h-[5px] top-0 w-full bg-[#30743c] opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-500"></div>
 
-                  <Link href={data.path}>
-                    <div className="px-[0px] w-max cursor-pointer group-hover:text-[#30743c]">
-                      {data.name}
-                    </div>
-                  </Link>
-                  {data.subsections && (
+                  {data.subsections ? (
                     <div
-                      className="ml-2"
+                      className="flex items-center cursor-pointer group-hover:text-[#30743c]"
                       onClick={() => toggleSubsections(index)}
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className={`h-4 w-4 transform transition-transform duration-300 ${
-                          showSubsections[index] ? "rotate-180" : ""
-                        }`}
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
+                      <div className="px-[0px] w-max">
+                        {data.name}
+                      </div>
+                      <div className="ml-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className={`h-4 w-4 transform transition-transform duration-300 ${
+                            openDropdown === index ? "rotate-180" : ""
+                          }`}
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </div>
                     </div>
+                  ) : (
+                    <Link href={data.path}>
+                      <div className="px-[0px] w-max cursor-pointer group-hover:text-[#30743c]">
+                        {data.name}
+                      </div>
+                    </Link>
                   )}
-                  {data.subsections && showSubsections[index] && (
+
+                  {data.subsections && openDropdown === index && (
                     <div className="subsections flex flex-col place-content-center place-items-center z-[1000] transition-all duration-300 absolute top-[60px] left-[0px] bg-white text-[#39B54A]">
                       {data.subsections.map((item, subIndex) => (
                         <Link
