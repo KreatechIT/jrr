@@ -1,4 +1,38 @@
 User-agent: *
-Disallow:
+Disallow: /cgi-bin/
+Disallow: /application/
+Disallow: /src/
+Disallow: /storage/
+Disallow: /system/
 
-Sitemap: https://jrenterprise.com.bd/sitemap.xml
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+Sitemap: https://jrrecyclingsolutionsltd.com.bd/sitemap.xml
