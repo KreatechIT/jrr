@@ -1,9 +1,9 @@
 import React from "react";
 
 export const metadata = {
-  title: "Electronic Recycling - Recycle Your E-Waste Responsibly | our team",
+  title: "JR E-Waste Recycling Teams | JR Recycling Bangladesh BD",
   description:
-    "Electronic recycling plays a crucial role in waste management by responsibly disposing of e-waste, thus promoting environmental sustainability through e-waste recycling.",
+    "Meet JR e-waste recycling teams in Bangladesh, experienced professionals delivering safe e-waste collection, dismantling, recycling and disposal support now.",
   alternates: {
     canonical: "https://jrrecyclingsolutionsltd.com.bd/team",
   },

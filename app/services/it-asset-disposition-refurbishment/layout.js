@@ -1,9 +1,9 @@
 import React from "react";
 
 export const metadata = {
-  title: "E-Waste Solutions: Pcb Recycling Jr Recycling Solution Ltd",
+  title: "It Asset Disposition In Bangladesh | JR BD",
   description:
-    "Learn about pcb recycling, its environmental benefits, and techniques. Explore custom pcb, electric, and electronics recycling processes in bangladesh.",
+    "JR Recycling Solutions offers it asset disposition refurbishment in Bangladesh to recover value, reuse devices and recycle outdated IT equipment responsibly.",
   alternates: {
     canonical:
       "https://jrrecyclingsolutionsltd.com.bd/services/it-asset-disposition-refurbishment",

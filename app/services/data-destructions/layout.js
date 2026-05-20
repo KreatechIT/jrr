@@ -1,9 +1,9 @@
 import React from "react";
 
 export const metadata = {
-  title: "Data Destruction and Data Elimination Service Process",
+  title: "Data Destructions In Bangladesh | JR Recycling Solutions",
   description:
-    "Secure Data Destruction and Elimination Service Process by Jr Recycling Solution Ltd - Trustworthy and Efficient Solutions for All Your Data Security Needs.",
+    "Protect your business with data destructions in Bangladesh by JR Recycling Solutions, including secure handling, disposal and responsible e-waste recycling.",
   alternates: {
     canonical:
       "https://jrrecyclingsolutionsltd.com.bd/services/data-destructions",

@@ -1,9 +1,12 @@
 import React from "react";
 
 export const metadata = {
-  title: "photos of e-waste management process-Jr Recycling Solution Ltd",
+  title: "Event Gallery Of E-Waste Recycling | JR Solutions BD Team",
   description:
-    "Jr Recycling Solution LTD is an E-waste Recycling company in Bangladesh. Started its journey in 2011. We prioritize environmental and personal safety precautions.",
+    "View the event gallery of e-waste recycling at JR Recycling Solutions, featuring awareness events, collection programs and sustainability activities today.",
+  alternates: {
+    canonical: "https://jrrecyclingsolutionsltd.com.bd/gallery/events-gallery",
+  },
 };
 
 function layout({ children }) {

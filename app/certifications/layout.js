@@ -1,9 +1,9 @@
 import React from "react";
 
 export const metadata = {
-  title: "Certifications and official approvals | Jr Recycling Solution Ltd",
+  title: "Certifications Of JR E-Waste Recycling | JR Solutions BD",
   description:
-    "all membership, Certifications, and Official Approvals of Jr Recycling Solution Ltd. We have official permission from the different Govt authorities.",
+    "See certifications of jr e-waste recycling that show JR Recycling Solutions commitment to compliance, safe recycling, responsible handling and quality in BD.",
   alternates: {
     canonical: "https://jrrecyclingsolutionsltd.com.bd/certifications",
   },

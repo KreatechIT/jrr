@@ -11,9 +11,9 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-  title: "JR Recycling – Leading E-Waste Management Company in Bangladesh",
+  title: "E-Waste Recycling And Management | JR Recycling Solutions BD",
   description:
-    "JR Recycling is the best e-waste recycling and management company in Bangladesh, collecting and recycling e-waste products throughout the country.",
+    "Choose JR Recycling Solutions for e-waste recycling and management in Bangladesh, with safe collection, processing, recycling and disposal support for firms.",
   alternates: {
     canonical: "https://jrrecyclingsolutionsltd.com.bd/",
   },

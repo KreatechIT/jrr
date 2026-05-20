@@ -1,9 +1,9 @@
 import React from "react";
 
 export const metadata = {
-  title: "Waste Management E-Waste Recycling Company - JR Recycling",
+  title: "About Us | JR Recycling Solutions Bangladesh",
   description:
-    "JR Recycling Solution Ltd, a leading waste management e-waste recycling company, offers innovative disposal solutions to tackle Dhaka's e-waste crisis effectively.",
+    "Learn about us at JR Recycling Solutions, a trusted e-waste recycling company in Bangladesh offering safe, responsible and eco-friendly recycling services.",
   alternates: {
     canonical: "https://jrrecyclingsolutionsltd.com.bd/about-us",
   },

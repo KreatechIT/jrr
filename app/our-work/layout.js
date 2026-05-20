@@ -1,9 +1,9 @@
 import React from "react";
 
 export const metadata = {
-  title: "Electric Waste Recycling: The Good and the Bad - Jr Recycling Ltd",
+  title: "E-Waste Services In Bangladesh | JR Recycling Solutions",
   description:
-    "Dispose of electric waste responsibly with our comprehensive e-waste solutions. Safeguard the environment and your data with Waste Connection.",
+    "Discover e-waste services in Bangladesh from JR Recycling Solutions, including collection, dismantling, data destruction, recycling and safe disposal today.",
   alternates: {
     canonical: "https://jrrecyclingsolutionsltd.com.bd/our-work",
   },

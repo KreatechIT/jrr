@@ -1,9 +1,9 @@
 import React from "react";
 
 export const metadata = {
-  title: "E-Waste Solutions: Pcb Recycling Jr Recycling Solution Ltd",
+  title: "E Waste Recycling In Bangladesh | JR Recycling Solutions",
   description:
-    "Learn about pcb recycling, its environmental benefits, and techniques. Explore custom pcb, electric, and electronics recycling processes in bangladesh.",
+    "Get reliable e waste recycling in Bangladesh with JR Recycling Solutions for secure collection, dismantling, recycling and responsible waste handling in BD.",
   alternates: {
     canonical:
       "https://jrrecyclingsolutionsltd.com.bd/services/e-waste-recycling",
