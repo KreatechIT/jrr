@@ -35,7 +35,7 @@ function Layout({ children, params }) {
           <link rel="icon" href={favIcon} sizes="any" />
           <link
             rel="canonical"
-            href="https://jrrecyclingsolutionsltd.com.bd/blog"
+            href={`https://jrrecyclingsolutionsltd.com.bd/blog/${params.slug}`}
           />
         </head>
         <section className="justify-center content-center flex place-content-center place-items-center items-center">
