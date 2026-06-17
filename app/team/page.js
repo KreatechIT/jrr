@@ -11,6 +11,11 @@ const Items = [
     post: "Managing Director",
   },
   {
+    image: "/team/md-arkesh-ali-hossain-chief-adviser.jpeg",
+    title: "Md. Arkesh Ali Hossain",
+    post: "Chief Adviser",
+  },
+  {
     image: "/team/Director_Finance.png",
     title: "Shaheda Amir",
     post: "Director, Accounts & Finance",
@@ -19,6 +24,11 @@ const Items = [
     image: "/team/Director.png",
     title: "Iftiakh Hossain",
     post: "Director, Business Development",
+  },
+  {
+    image: "/team/md-nurun-nabi-agm-operation.jpeg",
+    title: "Md. Nurun Nabi",
+    post: "AGM (Operation)",
   },
   // {
   //   image:
@@ -148,7 +158,7 @@ function Page() {
               {Items.map((data, index) => (
                 <div
                   key={index}
-                  className="w-[75%] tablet:w-[50%]  laptop:w-[25%] border-2 border-[#39B54A]  rounded-xl shadow-black/70 shadow-sm transition-all duration-700 hover:scale-105 overflow-hidden relative group"
+                  className="w-[75%] tablet:w-[50%] laptop:w-[25%] h-[360px] tablet:h-[400px] laptop:h-[420px] border-2 border-[#39B54A] rounded-xl shadow-black/70 shadow-sm transition-all duration-700 hover:scale-105 overflow-hidden relative group"
                 >
                   <Image
                     loading="eager"
@@ -156,7 +166,7 @@ function Page() {
                     width={400}
                     height={400}
                     src={data.image}
-                    className={`w-full object-cover h-full ${"hover:blur-sm"}`}
+                    className={`w-full object-cover object-top h-full ${"hover:blur-sm"}`}
                   />
 
                   <Slide

@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { getSinglePost } from "@/customFunctions/getSinglePost";
 import React, { useEffect, useState } from "react";
-import favIcon from "@/app/favicon.ico";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
@@ -32,7 +31,7 @@ function Layout({ children, params }) {
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
-          <link rel="icon" href={favIcon} sizes="any" />
+          <link rel="icon" href="/favicon.ico" sizes="any" />
           <link
             rel="canonical"
             href={`https://jrrecyclingsolutionsltd.com.bd/blog/${params.slug}`}

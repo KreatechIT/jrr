@@ -67,6 +67,11 @@ function Members() {
       post: "Managing Director",
     },
     {
+      image: "/team/md-arkesh-ali-hossain-chief-adviser.jpeg",
+      title: "Md. Arkesh Ali Hossain",
+      post: "Chief Adviser",
+    },
+    {
       image: "/team/Director_Finance.png",
       title: "Shaheda Amir",
       post: "Director, Accounts & Finance",
@@ -75,6 +80,11 @@ function Members() {
       image: "/team/Director.png",
       title: "Iftiakh Hossain",
       post: "Director, Business Development",
+    },
+    {
+      image: "/team/md-nurun-nabi-agm-operation.jpeg",
+      title: "Md. Nurun Nabi",
+      post: "AGM (Operation)",
     },
     // {
     //   image:
@@ -133,7 +143,7 @@ function Members() {
                   width={300}
                   height={400}
                   src={data.image}
-                  className="w-full object-cover h-auto"
+                  className="w-full h-[560px] object-cover object-top shrink-0"
                 />
                 <div className="justify-center mt-[20px] items-center h-[15%] px-5 text-black text-center">
                   <p className="text-[27px] font-bold">{data.title}</p>
