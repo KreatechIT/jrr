@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev -p 4000",
     "build": "next build",
+    "sitemap": "node scripts/generate-sitemap.mjs",
     "start": "node server.js",
     "lint": "next lint"
   },

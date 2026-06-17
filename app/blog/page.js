@@ -8,6 +8,27 @@ import { Pagination } from "@mui/material";
 import usePosts from "@/customFunctions/usePosts";
 import { useRouter } from "next/navigation";
 
+const BlogCardSkeleton = () => (
+  <div
+    className="flex flex-col overflow-hidden rounded-xl laptop:w-[350px] mobile:w-full bg-white shadow-xl"
+    style={{ height: "580px" }}
+  >
+    <div className="h-[200px] w-full bg-gray-200 animate-pulse" />
+    <div className="flex flex-col flex-grow px-[6%] py-[6%]">
+      <div className="h-7 w-4/5 rounded bg-gray-200 animate-pulse" />
+      <div className="mt-4 h-7 w-3/5 rounded bg-gray-200 animate-pulse" />
+      <div className="mt-8 space-y-3">
+        <div className="h-4 w-full rounded bg-gray-200 animate-pulse" />
+        <div className="h-4 w-11/12 rounded bg-gray-200 animate-pulse" />
+        <div className="h-4 w-2/3 rounded bg-gray-200 animate-pulse" />
+      </div>
+      <div className="mt-auto h-10 w-[80%] rounded-md bg-gray-200 animate-pulse" />
+    </div>
+    <div className="w-full h-[1px] bg-black/10" />
+    <div className="mx-[6%] my-[4%] h-5 w-1/2 rounded bg-gray-200 animate-pulse" />
+  </div>
+);
+
 function Page() {
   const router = useRouter();
   const [page_number, setPageNumber] = useState(1);
@@ -46,7 +67,18 @@ function Page() {
         bg="/backgrounds/16.jpeg"
       />
       <section className="py-[5%] px-[5%]">
-        {posts.length !== 0 || !loading ? (
+        {loading ? (
+          <div>
+            <p className="text-center text-[26px] font-bold text-black animate-pulse">
+              Loading blog posts...
+            </p>
+            <div className="mt-[60px] justify-center items-center w-full flex laptop:flex-row mobile:flex-col flex-wrap place-items-center gap-x-[20px] gap-y-[60px]">
+              {Array.from({ length: 6 }).map((_, index) => (
+                <BlogCardSkeleton key={index} />
+              ))}
+            </div>
+          </div>
+        ) : posts.length !== 0 ? (
           <div className="mt-[60px] justify-center items-center w-full flex laptop:flex-row mobile:flex-col flex-wrap place-items-center gap-x-[20px] gap-y-[60px]">
             {posts.map((data, index) => (
               <div
@@ -109,26 +141,21 @@ function Page() {
           </div>
         ) : (
           <div>
-            <p className="text-[46px] font-bold text-black animate-pulse">
-              Please Wait...!
-            </p>
-          </div>
-        )}
-        {loading && (
-          <div>
-            <p className="text-[46px] font-bold text-black animate-pulse">
-              Please Wait...!
+            <p className="text-[30px] font-bold text-black">
+              No blog posts found.
             </p>
           </div>
         )}
       </section>
-      <div className="my-[20px] laptop:mb-[30px]">
-        <Pagination
-          count={Math.ceil(totalPosts / postsPerPage)}
-          page={page_number}
-          onChange={handlePageChange}
-        />
-      </div>
+      {!loading && totalPosts > 0 && (
+        <div className="my-[20px] laptop:mb-[30px]">
+          <Pagination
+            count={Math.ceil(totalPosts / postsPerPage)}
+            page={page_number}
+            onChange={handlePageChange}
+          />
+        </div>
+      )}
     </div>
   );
 }

@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -60,8 +61,9 @@ export default function RootLayout({ children, params }) {
         />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="URL to your image here" />
-        <script
+        <Script
           id="gtm-script"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

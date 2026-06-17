@@ -21,14 +21,14 @@ const usePosts = (page_number) => {
   };
 
   useEffect(() => {
+    let isMounted = true;
+
     const fetchPosts = async () => {
       setLoading(true);
       try {
         const response = await axios.get(
           `https://blog.jrrecyclingsolutionsltd.com.bd/wp-json/wp/v2/posts?page=${page_number}&per_page=${postsPerPage}`
         );
-        setPosts(response.data);
-        setTotalPosts(parseInt(response.headers["x-wp-total"], 10));
         const urls = {};
         await Promise.all(
           response.data.map(async (post) => {
@@ -38,14 +38,25 @@ const usePosts = (page_number) => {
             }
           })
         );
-        setImageUrls(urls);
+        if (isMounted) {
+          setPosts(response.data);
+          setTotalPosts(parseInt(response.headers["x-wp-total"], 10));
+          setImageUrls(urls);
+        }
       } catch (error) {
         console.error("Error fetching posts:", error);
+      } finally {
+        if (isMounted) {
+          setLoading(false);
+        }
       }
     };
 
     fetchPosts();
-    setLoading(false);
+
+    return () => {
+      isMounted = false;
+    };
   }, [page_number, postsPerPage]);
 
   return { posts, imageUrls, totalPosts, postsPerPage, loading };

@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 export default function BlogRootLayout({
   children,
   pageTitle,
@@ -8,12 +10,12 @@ export default function BlogRootLayout({
 
   return (
     <html lang="en">
-      <head>
+      <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </head>
+      </Head>
       <body>{children}</body>
     </html>
   );

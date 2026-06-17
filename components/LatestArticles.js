@@ -5,12 +5,26 @@ import React from "react";
 
 function LatestArticles() {
   const allItems = getAllPosts();
+
   return (
     <div className="mobile:w-full mt-0 laptop:w-[30%]">
       <p className="text-[40px] w-max font-bold text-black">Latest Articles</p>
       <div className="bg-[#22C55E] w-full h-[7px]" />
       <div className="space-y-4 mt-5">
-        {allItems.posts.map((data, index) => (
+        {allItems.loading
+          ? Array.from({ length: 3 }).map((_, index) => (
+              <div
+                key={index}
+                className="rounded-2xl flex py-5 px-4 bg-gray-200 animate-pulse"
+              >
+                <div className="h-[100px] w-[100px] shrink-0 rounded bg-gray-300" />
+                <div className="ml-5 flex-1 space-y-3 pt-2">
+                  <div className="h-5 w-full rounded bg-gray-300" />
+                  <div className="h-5 w-2/3 rounded bg-gray-300" />
+                </div>
+              </div>
+            ))
+          : allItems.posts.map((data, index) => (
           <Link
             href={`/blog/${data.slug}`}
             key={index}
@@ -27,7 +41,7 @@ function LatestArticles() {
               {data.title.rendered}
             </p>
           </Link>
-        ))}
+            ))}
       </div>
     </div>
   );
