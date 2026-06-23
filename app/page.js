@@ -36,7 +36,7 @@ export default function Home() {
                 <h2 className="laptop:text-[24px] mobile:text-[17px] font-[500] text-white mt-4">
                   Having certifications like{" "}
                   <span className="font-bold">
-                    R2: 2013 & ISO 9001:2015, 14001:2015, 27001:2022, 45001:2018
+                    ISO 9001:2015, 14001:2015, 27001:2022, 45001:2018
                   </span>{" "}
                   demonstrates our commitment to responsible e-waste management.
                 </h2>
@@ -44,7 +44,7 @@ export default function Home() {
                 <div className="mt-4">
                   <Link
                     target="_blank"
-                    href="https://drive.google.com/file/d/1GMyKVj0rNTrTo60PaC-1hG9wQyRldhOw/view"
+                    href="/JR-Recycling-Solutions-LTD-Company-Profile.pdf"
                     className=" text-white rounded-md py-2.5 px-5  bg-[#30743c] hover:bg-[#1b4332] transition-all duration-300 uppercase text-sm text-center flex items-center gap-4 max-w-72 border-2 border-[#30743c]"
                   >
                     View Our Company Profile <ArrowOutward className="mb-0.5" />
