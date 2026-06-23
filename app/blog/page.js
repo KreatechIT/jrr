@@ -32,7 +32,7 @@ const BlogCardSkeleton = () => (
 function Page() {
   const router = useRouter();
   const [page_number, setPageNumber] = useState(1);
-  const { posts, imageUrls, totalPosts, postsPerPage, loading } =
+  const { posts, imageUrls, totalPosts, postsPerPage, loading, error } =
     usePosts(page_number);
 
   const FinalDate = (gmtDateStr) => {
@@ -52,21 +52,25 @@ function Page() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const decodeHtmlEntities = (text) => {
+    const textarea = document.createElement("textarea");
+    textarea.innerHTML = text;
+    return textarea.value;
+  };
+
   const truncateTitle = (title, wordLimit) => {
-    const words = title.split(" ");
+    const decodedTitle = decodeHtmlEntities(title);
+    const words = decodedTitle.split(" ");
     if (words.length > wordLimit) {
       return words.slice(0, wordLimit).join(" ") + "...";
     }
-    return title;
+    return decodedTitle;
   };
 
   return (
     <div className="flex flex-col place-content-center place-items-center">
-      <Layout
-        title="Blog"
-        bg="/backgrounds/16.jpeg"
-      />
-      <section className="py-[5%] px-[5%]">
+      <Layout title="Blog" bg="/backgrounds/16.jpeg" />
+      <section className="py-[5%] px-[5%] min-h-[500px]">
         {loading ? (
           <div>
             <p className="text-center text-[26px] font-bold text-black animate-pulse">
@@ -78,7 +82,31 @@ function Page() {
               ))}
             </div>
           </div>
-        ) : posts.length !== 0 ? (
+        ) : error ? (
+          <div className="flex flex-col items-center justify-center min-h-[400px]">
+            <div className="flex flex-col items-center gap-4 text-center px-4">
+              <svg
+                className="w-24 h-24 text-red-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <p className="text-[32px] font-bold text-black/80">
+                No Blogs Found
+              </p>
+              <p className="text-[20px] text-black/60 max-w-md">
+                Unable to load blog articles at the moment. Please try again later.
+              </p>
+            </div>
+          </div>
+        ) : posts.length > 0 ? (
           <div className="mt-[60px] justify-center items-center w-full flex laptop:flex-row mobile:flex-col flex-wrap place-items-center gap-x-[20px] gap-y-[60px]">
             {posts.map((data, index) => (
               <div
@@ -90,11 +118,11 @@ function Page() {
                 }}
               >
                 <Image
-                  loading="eager"
+                  loading="lazy"
                   height={300}
                   width={300}
                   src={imageUrls[data.featured_media]}
-                  alt={data.title.rendered}
+                  alt={decodeHtmlEntities(data.title.rendered)}
                   className="h-[200px] w-full object-cover"
                 />
 
@@ -140,9 +168,9 @@ function Page() {
             ))}
           </div>
         ) : (
-          <div>
-            <p className="text-[30px] font-bold text-black">
-              No blog posts found.
+          <div className="flex items-center justify-center min-h-[400px]">
+            <p className="text-[28px] font-semibold text-black/50">
+              No articles found
             </p>
           </div>
         )}

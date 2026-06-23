@@ -7,9 +7,9 @@ import "react-medium-image-zoom/dist/styles.css";
 import Image from "next/image";
 
 const Items = [
-  {
-    image: "/certifications/R2_2013_Renewed-2025-scaled.jpeg",
-  },
+  // {
+  //   image: "/certifications/R2_2013_Renewed-2025-scaled.jpeg",
+  // },
   {
     image: "/certifications/ISO45001_CERT-J-R-RECYCLING-SOLUTIONS-LIMITED-S-1-1-scaled.jpeg",
   },

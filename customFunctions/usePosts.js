@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 const usePosts = (page_number) => {
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   const [posts, setPosts] = useState([]);
   const [imageUrls, setImageUrls] = useState({});
   const [totalPosts, setTotalPosts] = useState(0);
@@ -25,6 +26,7 @@ const usePosts = (page_number) => {
 
     const fetchPosts = async () => {
       setLoading(true);
+      setError(false);
       try {
         const response = await axios.get(
           `https://blog.jrrecyclingsolutionsltd.com.bd/wp-json/wp/v2/posts?page=${page_number}&per_page=${postsPerPage}`
@@ -45,6 +47,9 @@ const usePosts = (page_number) => {
         }
       } catch (error) {
         console.error("Error fetching posts:", error);
+        if (isMounted) {
+          setError(true);
+        }
       } finally {
         if (isMounted) {
           setLoading(false);
@@ -59,7 +64,7 @@ const usePosts = (page_number) => {
     };
   }, [page_number, postsPerPage]);
 
-  return { posts, imageUrls, totalPosts, postsPerPage, loading };
+  return { posts, imageUrls, totalPosts, postsPerPage, loading, error };
 };
 
 export default usePosts;
