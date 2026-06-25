@@ -116,7 +116,7 @@ function Page() {
                         alt=""
                         fill
                         src={data.image}
-                        className="w-full hover:brightness-50 transition-all object-cover h-full"
+                        className="w-full hover:brightness-50 transition-all object-contain h-full bg-white"
                       />
                     </div>
                   </Zoom>
@@ -173,7 +173,7 @@ function Page() {
               className="w-[240px] rounded-xl border-2 border-[#39B54A] h-[240px] overflow-hidden relative p-[5px] group"
             >
               <Image
-                layout="fill"
+                fill
                 src={data.image}
                 className="w-full object-cover h-full"
                 alt={data.alt}

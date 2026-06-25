@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["blog.jrrecyclingsolutionsltd.com.bd"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "blog.jrrecyclingsolutionsltd.com.bd",
+      },
+    ],
   },
 };
 
