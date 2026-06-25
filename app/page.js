@@ -9,8 +9,8 @@ import OurWorkProcess from "@/sections/OurWorkProcess";
 import Partners from "@/sections/Partners";
 import Projects from "@/sections/Projects";
 import Testimonials from "@/sections/Testimonials";
-import { ArrowOutward } from "@mui/icons-material";
-import Link from "next/link";
+// import { ArrowOutward } from "@mui/icons-material";
+// import Link from "next/link";
 import { Slide } from "react-awesome-reveal";
 
 export default function Home() {
@@ -41,7 +41,7 @@ export default function Home() {
                   demonstrates our commitment to responsible e-waste management.
                 </h2>
 
-                <div className="mt-4">
+                {/* <div className="mt-4">
                   <Link
                     target="_blank"
                     href="/JR-Recycling-Solutions-LTD-Company-Profile.pdf"
@@ -49,7 +49,7 @@ export default function Home() {
                   >
                     View Our Company Profile <ArrowOutward className="mb-0.5" />
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
