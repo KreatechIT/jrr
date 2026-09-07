@@ -22,22 +22,22 @@ export async function generateMetadata({ params }) {
 
   const metaTitle = post.seo?.meta_title || post.title;
   const metaDescription = post.seo?.meta_description || post.excerpt || undefined;
+  const canonicalUrl = `https://jrrecyclingsolutionsltd.com.bd/blog/${post.slug}`;
+  const ogImage = post.seo?.og_image_url || post.featured_image_url || undefined;
 
   return {
     title: metaTitle,
     description: metaDescription,
     alternates: {
-      canonical: `https://jrrecyclingsolutionsltd.com.bd/blog/${post.slug}`,
+      canonical: canonicalUrl,
     },
-    robots: post.seo?.meta_robots || undefined,
     openGraph: {
+      type: "article",
+      url: canonicalUrl,
       title: post.seo?.og_title || metaTitle,
       description: post.seo?.og_description || metaDescription,
-      images: post.seo?.og_image_url
-        ? [post.seo.og_image_url]
-        : post.featured_image_url
-        ? [post.featured_image_url]
-        : undefined,
+      images: ogImage ? [ogImage] : undefined,
+      publishedTime: post.published_at || undefined,
     },
   };
 }
@@ -70,10 +70,10 @@ async function Page({ params }) {
               />
             </div>
           )}
-          <p
-            className="font-lato  text-black/70 mt-[30px] text-[24px] font-semibold"
+          <div
+            className="font-lato text-black/70 mt-[30px] text-[24px] font-semibold"
             dangerouslySetInnerHTML={{ __html: post.body }}
-          ></p>
+          ></div>
         </div>
         <LatestArticles />
       </section>
