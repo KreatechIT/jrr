@@ -4,7 +4,7 @@ import Image from "next/image";
 import { fetchPosts } from "@/customFunctions/blogApi";
 import BlogPagination from "@/components/BlogPagination";
 
-export const revalidate = 300;
+export const revalidate = 60;
 
 const FinalDate = (isoDateStr) => {
   if (!isoDateStr) return "";
@@ -43,7 +43,7 @@ async function Page({ searchParams }) {
   return (
     <div className="flex flex-col place-content-center place-items-center">
       <Layout title="Blog" bg="/backgrounds/16.jpeg" />
-      <section className="py-[5%] px-[5%] min-h-[500px]">
+      <section className="py-[5%] px-[5%] min-h-[500px] w-full max-w-[1400px]">
         {error ? (
           <div className="flex flex-col items-center justify-center min-h-[400px]">
             <div className="flex flex-col items-center gap-4 text-center px-4">
@@ -69,63 +69,64 @@ async function Page({ searchParams }) {
             </div>
           </div>
         ) : posts.length > 0 ? (
-          <div className="mt-[60px] justify-center items-center w-full flex laptop:flex-row mobile:flex-col flex-wrap place-items-center gap-x-[20px] gap-y-[60px]">
+          <div className="mt-[60px] grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 gap-8">
             {posts.map((data, index) => (
               <Link
                 href={`/blog/${data.slug}`}
                 key={index}
-                className="flex flex-col cursor-pointer overflow-hidden rounded-xl laptop:w-[350px] mobile:w-full bg-white shadow-xl hover:shadow-2xl transition-all"
-                style={{ height: "580px" }}
+                className="group flex flex-col overflow-hidden rounded-xl bg-white shadow-xl hover:shadow-2xl transition-all"
               >
-                {data.featured_image_url ? (
-                  <Image
-                    loading="lazy"
-                    height={300}
-                    width={300}
-                    src={data.featured_image_url}
-                    alt={data.featured_image_alt || data.title}
-                    className="h-[200px] w-full object-cover"
-                  />
-                ) : (
-                  <div className="h-[200px] w-full bg-gray-200" />
-                )}
+                <div className="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+                  {data.featured_image_url ? (
+                    <Image
+                      loading="lazy"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      src={data.featured_image_url}
+                      alt={data.featured_image_alt || data.title}
+                      className="object-contain group-hover:scale-105 transition-transform duration-300"
+                    />
+                  ) : (
+                    <div className="h-full w-full bg-gray-200" />
+                  )}
+                </div>
 
-                <div className="flex flex-col flex-grow">
-                  <div className="px-[6%] py-[6%] flex flex-col flex-grow">
-                    {data.categories?.length > 0 && (
-                      <p className="uppercase tracking-wide text-[13px] font-bold text-[#43AC4D] mb-2">
-                        {data.categories.map((c) => c.name).join(", ")}
-                      </p>
-                    )}
-                    <p className="font-bold max-h-[200px] text-[22px] leading-8 text-[#39B54A] ">
-                      {truncateTitle(data.title, 10)}
+                <div className="flex flex-col flex-grow px-6 py-6">
+                  {data.categories?.length > 0 && (
+                    <p className="uppercase tracking-wide text-[13px] font-bold text-[#43AC4D] mb-2">
+                      {data.categories.map((c) => c.name).join(", ")}
                     </p>
+                  )}
+                  <p className="font-bold text-[22px] leading-8 text-[#1D7773]">
+                    {truncateTitle(data.title, 10)}
+                  </p>
 
-                    {data.excerpt && (
-                      <p className="my-[5%] max-h-[140px] overflow-hidden line-clamp-3 text-black/70 font-medium text-[20px]">
-                        {data.excerpt}
-                      </p>
-                    )}
-                    <div className="flex mt-auto w-[80%] bg-[#43AC4D] hover:bg-[#7ABD4C] text-white/75 hover:text-white transition-all px-[10px] rounded-md space-x-2 place-items-center">
-                      <p className="font-[600] text-[24px]">Continue Reading</p>
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6 12L18 12M18 12L12 6M18 12L12 18"
-                          stroke="#fff"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </div>
+                  {(data.short_description || data.excerpt) && (
+                    <p className="mt-3 line-clamp-3 text-black/70 font-medium text-[16px]">
+                      {data.short_description || data.excerpt}
+                    </p>
+                  )}
+
+                  <div className="flex mt-5 w-max bg-[#43AC4D] group-hover:bg-[#7ABD4C] text-white/90 group-hover:text-white transition-all px-4 py-2 rounded-md items-center gap-2">
+                    <p className="font-[600] text-[16px]">Continue Reading</p>
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6 12L18 12M18 12L12 6M18 12L12 18"
+                        stroke="#fff"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
                   </div>
-                  <div className="w-full h-[1px] bg-black/30" />
-                  <p className="px-[6%] py-[2%] font-bold text-[20px] text-black/50">
+
+                  <div className="w-full h-[1px] bg-black/10 mt-6 mb-4" />
+                  <p className="font-bold text-[15px] text-black/50">
                     {FinalDate(data.published_at)}
                   </p>
                 </div>

@@ -2,7 +2,8 @@ import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const SITE_URL = "https://jrrecyclingsolutionsltd.com.bd";
-const BLOG_API_URL = "https://blog.jrrecyclingsolutionsltd.com.bd/api/blog";
+const BLOG_SITEMAP_API_URL =
+  "https://blog.jrrecyclingsolutionsltd.com.bd/api/blog/sitemap";
 const OUTPUT_FILES = ["sitemap.xml", "public/sitemap.xml"];
 
 const staticRoutes = [
@@ -46,35 +47,21 @@ const routeToUrl = ({ path: routePath, lastmod = today, priority }) => ({
 });
 
 async function fetchBlogPosts() {
-  const posts = [];
-  let page = 1;
-  let hasNext = true;
+  const response = await fetch(BLOG_SITEMAP_API_URL);
 
-  do {
-    const url = new URL(BLOG_API_URL);
-    url.searchParams.set("page", String(page));
-    url.searchParams.set("page_size", "50");
+  if (!response.ok) {
+    throw new Error(
+      `Failed to fetch blog posts for sitemap: ${response.status} ${response.statusText}`
+    );
+  }
 
-    const response = await fetch(url);
-
-    if (!response.ok) {
-      throw new Error(
-        `Failed to fetch blog posts for sitemap: ${response.status} ${response.statusText}`
-      );
-    }
-
-    const data = await response.json();
-    posts.push(...data.results);
-    hasNext = Boolean(data.next);
-    page += 1;
-  } while (hasNext);
-
-  return posts;
+  const { data } = await response.json();
+  return data;
 }
 
 const blogPostToUrl = (post) => ({
   loc: `${SITE_URL}/blog/${post.slug}`,
-  lastmod: new Date(post.published_at || today).toISOString(),
+  lastmod: today,
   priority: "0.70",
 });
 

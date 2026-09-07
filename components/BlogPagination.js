@@ -6,7 +6,7 @@ function BlogPagination({ count, page }) {
   const router = useRouter();
 
   const handlePageChange = (event, value) => {
-    router.push(`/blog?page=${value}`);
+    router.push(value > 1 ? `/blog?page=${value}` : "/blog");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 

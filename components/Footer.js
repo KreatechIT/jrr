@@ -150,7 +150,7 @@ function Footer() {
       </div>
       <div className="w-full flex place-content-center place-items-center border-t-2 border-white/45 px-4">
         <p className="text-[17px] py-[30px] text-white">
-          © 2024 JR Recycling Solutions Ltd. All Rights Reserved.
+          © {new Date().getFullYear()} JR Recycling Solutions Ltd. All Rights Reserved.
         </p>
       </div>
     </div>

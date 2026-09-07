@@ -52,3 +52,14 @@ export async function fetchPostBySlug(slug) {
   const json = await res.json();
   return fixPostImages(json.data);
 }
+
+export async function fetchSitemapPosts() {
+  const res = await fetch(`${BLOG_API_BASE_URL}/sitemap`, {
+    next: { revalidate: 3600 },
+  });
+  if (!res.ok) {
+    throw new Error(`Failed to fetch sitemap posts: ${res.status}`);
+  }
+  const json = await res.json();
+  return json.data;
+}

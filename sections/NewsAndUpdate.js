@@ -82,18 +82,20 @@ function NewsAndUpdate() {
         {posts.slice(0, 4).map((data, index) => (
           <Slide key={index}>
             <div className="flex flex-col overflow-hidden rounded-xl laptop:w-[350px] mobile:w-full bg-white shadow-xl hover:shadow-2xl transition-all">
-              {data.featured_image_url ? (
-                <Image
-                  loading="eager"
-                  width={300}
-                  height={300}
-                  src={data.featured_image_url}
-                  alt={data.featured_image_alt || data.title}
-                  className="h-[200px] w-full object-cover"
-                />
-              ) : (
-                <div className="h-[200px] w-full bg-gray-200" />
-              )}
+              <div className="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+                {data.featured_image_url ? (
+                  <Image
+                    loading="eager"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 350px"
+                    src={data.featured_image_url}
+                    alt={data.featured_image_alt || data.title}
+                    className="object-contain"
+                  />
+                ) : (
+                  <div className="h-full w-full bg-gray-200" />
+                )}
+              </div>
 
               <div className="flex flex-col flex-grow">
                 <div className="px-[6%] py-[6%] flex flex-col flex-grow">
@@ -101,9 +103,9 @@ function NewsAndUpdate() {
                     {data.title}
                   </p>
 
-                  {data.excerpt && (
+                  {(data.short_description || data.excerpt) && (
                     <p className="my-[5%] max-h-[140px] overflow-hidden line-clamp-3 text-black/70 font-medium">
-                      {data.excerpt}
+                      {data.short_description || data.excerpt}
                     </p>
                   )}
                   <Link

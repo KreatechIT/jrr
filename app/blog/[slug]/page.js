@@ -59,14 +59,16 @@ async function Page({ params }) {
       <section className="py-[5%] flex mobile:flex-col laptop:flex-row justify-between px-[5%]">
         <div className="mr-[1%] text-clip text-wrap mobile:w-full laptop:w-[70%]">
           {post.featured_image_url && (
-            <Image
-              loading="lazy"
-              width={400}
-              height={500}
-              className="rounded-xl mobile:w-full laptop:w-[80%] h-[400px] object-cover"
-              src={post.featured_image_url}
-              alt={post.featured_image_alt || post.title}
-            />
+            <div className="relative mobile:w-full laptop:w-[80%] h-[400px] rounded-xl bg-gray-100 overflow-hidden">
+              <Image
+                loading="lazy"
+                fill
+                sizes="(max-width: 1024px) 100vw, 60vw"
+                className="object-contain"
+                src={post.featured_image_url}
+                alt={post.featured_image_alt || post.title}
+              />
+            </div>
           )}
           <p
             className="font-lato  text-black/70 mt-[30px] text-[24px] font-semibold"
