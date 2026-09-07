@@ -55,7 +55,7 @@ export async function fetchPostBySlug(slug) {
 
 export async function fetchSitemapPosts() {
   const res = await fetch(`${BLOG_API_BASE_URL}/sitemap`, {
-    next: { revalidate: 3600 },
+    next: { revalidate: 300 },
   });
   if (!res.ok) {
     throw new Error(`Failed to fetch sitemap posts: ${res.status}`);
