@@ -2,8 +2,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const SITE_URL = "https://jrrecyclingsolutionsltd.com.bd";
-const BLOG_API_URL =
-  "https://blog.jrrecyclingsolutionsltd.com.bd/wp-json/wp/v2/posts";
+const BLOG_API_URL = "https://blog.jrrecyclingsolutionsltd.com.bd/api/blog";
 const OUTPUT_FILES = ["sitemap.xml", "public/sitemap.xml"];
 
 const staticRoutes = [
@@ -49,13 +48,12 @@ const routeToUrl = ({ path: routePath, lastmod = today, priority }) => ({
 async function fetchBlogPosts() {
   const posts = [];
   let page = 1;
-  let totalPages = 1;
+  let hasNext = true;
 
   do {
     const url = new URL(BLOG_API_URL);
     url.searchParams.set("page", String(page));
-    url.searchParams.set("per_page", "100");
-    url.searchParams.set("_fields", "slug,modified_gmt,date_gmt");
+    url.searchParams.set("page_size", "50");
 
     const response = await fetch(url);
 
@@ -65,19 +63,18 @@ async function fetchBlogPosts() {
       );
     }
 
-    totalPages = Number(response.headers.get("x-wp-totalpages") || "1");
-    posts.push(...(await response.json()));
+    const data = await response.json();
+    posts.push(...data.results);
+    hasNext = Boolean(data.next);
     page += 1;
-  } while (page <= totalPages);
+  } while (hasNext);
 
   return posts;
 }
 
 const blogPostToUrl = (post) => ({
   loc: `${SITE_URL}/blog/${post.slug}`,
-  lastmod: new Date(
-    `${post.modified_gmt || post.date_gmt || today}Z`
-  ).toISOString(),
+  lastmod: new Date(post.published_at || today).toISOString(),
   priority: "0.70",
 });
 

@@ -1,88 +1,50 @@
-"use client";
 import Layout from "@/components/Layout";
 import Link from "next/link";
-import React, { useState } from "react";
-import bg from "@/assets/jr-recycling-workers.jpg";
 import Image from "next/image";
-import { Pagination } from "@mui/material";
-import usePosts from "@/customFunctions/usePosts";
-import { useRouter } from "next/navigation";
+import { fetchPosts } from "@/customFunctions/blogApi";
+import BlogPagination from "@/components/BlogPagination";
 
-const BlogCardSkeleton = () => (
-  <div
-    className="flex flex-col overflow-hidden rounded-xl laptop:w-[350px] mobile:w-full bg-white shadow-xl"
-    style={{ height: "580px" }}
-  >
-    <div className="h-[200px] w-full bg-gray-200 animate-pulse" />
-    <div className="flex flex-col flex-grow px-[6%] py-[6%]">
-      <div className="h-7 w-4/5 rounded bg-gray-200 animate-pulse" />
-      <div className="mt-4 h-7 w-3/5 rounded bg-gray-200 animate-pulse" />
-      <div className="mt-8 space-y-3">
-        <div className="h-4 w-full rounded bg-gray-200 animate-pulse" />
-        <div className="h-4 w-11/12 rounded bg-gray-200 animate-pulse" />
-        <div className="h-4 w-2/3 rounded bg-gray-200 animate-pulse" />
-      </div>
-      <div className="mt-auto h-10 w-[80%] rounded-md bg-gray-200 animate-pulse" />
-    </div>
-    <div className="w-full h-[1px] bg-black/10" />
-    <div className="mx-[6%] my-[4%] h-5 w-1/2 rounded bg-gray-200 animate-pulse" />
-  </div>
-);
+export const revalidate = 300;
 
-function Page() {
-  const router = useRouter();
-  const [page_number, setPageNumber] = useState(1);
-  const { posts, imageUrls, totalPosts, postsPerPage, loading, error } =
-    usePosts(page_number);
+const FinalDate = (isoDateStr) => {
+  if (!isoDateStr) return "";
+  const date = new Date(isoDateStr);
+  const month = date.toLocaleString("default", { month: "long" });
+  const day = date.getUTCDate();
+  const year = date.getUTCFullYear();
+  return `${month} ${day}, ${year}`;
+};
 
-  const FinalDate = (gmtDateStr) => {
-    var gmtDate = new Date(gmtDateStr);
+const truncateTitle = (title, wordLimit) => {
+  const words = title.split(" ");
+  if (words.length > wordLimit) {
+    return words.slice(0, wordLimit).join(" ") + "...";
+  }
+  return title;
+};
 
-    var month = gmtDate.toLocaleString("default", { month: "long" });
-    var day = gmtDate.getUTCDate();
-    var year = gmtDate.getUTCFullYear();
+async function Page({ searchParams }) {
+  const page_number = Number(searchParams?.page) > 0 ? Number(searchParams.page) : 1;
+  const postsPerPage = 9;
 
-    var normalDateStr = month + " " + day + ", " + year;
+  let posts = [];
+  let totalPosts = 0;
+  let error = false;
 
-    return normalDateStr;
-  };
-
-  const handlePageChange = (event, value) => {
-    setPageNumber(value);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  const decodeHtmlEntities = (text) => {
-    const textarea = document.createElement("textarea");
-    textarea.innerHTML = text;
-    return textarea.value;
-  };
-
-  const truncateTitle = (title, wordLimit) => {
-    const decodedTitle = decodeHtmlEntities(title);
-    const words = decodedTitle.split(" ");
-    if (words.length > wordLimit) {
-      return words.slice(0, wordLimit).join(" ") + "...";
-    }
-    return decodedTitle;
-  };
+  try {
+    const data = await fetchPosts(page_number, postsPerPage);
+    posts = data.results;
+    totalPosts = data.count;
+  } catch (err) {
+    console.error("Error fetching posts:", err);
+    error = true;
+  }
 
   return (
     <div className="flex flex-col place-content-center place-items-center">
       <Layout title="Blog" bg="/backgrounds/16.jpeg" />
       <section className="py-[5%] px-[5%] min-h-[500px]">
-        {loading ? (
-          <div>
-            <p className="text-center text-[26px] font-bold text-black animate-pulse">
-              Loading blog posts...
-            </p>
-            <div className="mt-[60px] justify-center items-center w-full flex laptop:flex-row mobile:flex-col flex-wrap place-items-center gap-x-[20px] gap-y-[60px]">
-              {Array.from({ length: 6 }).map((_, index) => (
-                <BlogCardSkeleton key={index} />
-              ))}
-            </div>
-          </div>
-        ) : error ? (
+        {error ? (
           <div className="flex flex-col items-center justify-center min-h-[400px]">
             <div className="flex flex-col items-center gap-4 text-center px-4">
               <svg
@@ -109,39 +71,42 @@ function Page() {
         ) : posts.length > 0 ? (
           <div className="mt-[60px] justify-center items-center w-full flex laptop:flex-row mobile:flex-col flex-wrap place-items-center gap-x-[20px] gap-y-[60px]">
             {posts.map((data, index) => (
-              <div
+              <Link
+                href={`/blog/${data.slug}`}
                 key={index}
                 className="flex flex-col cursor-pointer overflow-hidden rounded-xl laptop:w-[350px] mobile:w-full bg-white shadow-xl hover:shadow-2xl transition-all"
                 style={{ height: "580px" }}
-                onClick={() => {
-                  router.push(`/blog/${data.slug}`);
-                }}
               >
-                <Image
-                  loading="lazy"
-                  height={300}
-                  width={300}
-                  src={imageUrls[data.featured_media]}
-                  alt={decodeHtmlEntities(data.title.rendered)}
-                  className="h-[200px] w-full object-cover"
-                />
+                {data.featured_image_url ? (
+                  <Image
+                    loading="lazy"
+                    height={300}
+                    width={300}
+                    src={data.featured_image_url}
+                    alt={data.featured_image_alt || data.title}
+                    className="h-[200px] w-full object-cover"
+                  />
+                ) : (
+                  <div className="h-[200px] w-full bg-gray-200" />
+                )}
 
                 <div className="flex flex-col flex-grow">
                   <div className="px-[6%] py-[6%] flex flex-col flex-grow">
+                    {data.categories?.length > 0 && (
+                      <p className="uppercase tracking-wide text-[13px] font-bold text-[#43AC4D] mb-2">
+                        {data.categories.map((c) => c.name).join(", ")}
+                      </p>
+                    )}
                     <p className="font-bold max-h-[200px] text-[22px] leading-8 text-[#39B54A] ">
-                      {truncateTitle(data.title.rendered, 10)}
+                      {truncateTitle(data.title, 10)}
                     </p>
 
-                    <p
-                      dangerouslySetInnerHTML={{
-                        __html: data.excerpt.rendered,
-                      }}
-                      className="my-[5%] max-h-[140px] overflow-hidden line-clamp-3 text-black/70 font-medium text-[20px]"
-                    ></p>
-                    <Link
-                      href={`/blog/${data.slug}`}
-                      className="flex mt-auto w-[80%] bg-[#43AC4D] hover:bg-[#7ABD4C] text-white/75 hover:text-white transition-all px-[10px] rounded-md space-x-2 place-items-center"
-                    >
+                    {data.excerpt && (
+                      <p className="my-[5%] max-h-[140px] overflow-hidden line-clamp-3 text-black/70 font-medium text-[20px]">
+                        {data.excerpt}
+                      </p>
+                    )}
+                    <div className="flex mt-auto w-[80%] bg-[#43AC4D] hover:bg-[#7ABD4C] text-white/75 hover:text-white transition-all px-[10px] rounded-md space-x-2 place-items-center">
                       <p className="font-[600] text-[24px]">Continue Reading</p>
                       <svg
                         width="24"
@@ -157,14 +122,14 @@ function Page() {
                           strokeLinejoin="round"
                         />
                       </svg>
-                    </Link>
+                    </div>
                   </div>
                   <div className="w-full h-[1px] bg-black/30" />
                   <p className="px-[6%] py-[2%] font-bold text-[20px] text-black/50">
-                    {FinalDate(data.date)}
+                    {FinalDate(data.published_at)}
                   </p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         ) : (
@@ -175,12 +140,11 @@ function Page() {
           </div>
         )}
       </section>
-      {!loading && totalPosts > 0 && (
+      {!error && totalPosts > 0 && (
         <div className="my-[20px] laptop:mb-[30px]">
-          <Pagination
+          <BlogPagination
             count={Math.ceil(totalPosts / postsPerPage)}
             page={page_number}
-            onChange={handlePageChange}
           />
         </div>
       )}

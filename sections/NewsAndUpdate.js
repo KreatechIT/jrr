@@ -6,40 +6,18 @@ import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
 import { Slide } from "react-awesome-reveal";
+import { BLOG_API_URL, fixPostImages } from "@/customFunctions/blogApi";
 
 function NewsAndUpdate() {
   const [posts, setPosts] = useState([]);
-  const [imageUrls, setImageUrls] = useState({});
-
-  const getImageUrl = async (mediaId) => {
-    try {
-      const response = await axios.get(
-        `https://blog.jrrecyclingsolutionsltd.com.bd/wp-json/wp/v2/media/${mediaId}`
-      );
-      return response.data.source_url;
-    } catch (error) {
-      console.error("Error fetching image URL:", error);
-      return ""; // Return an empty string in case of error
-    }
-  };
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get(
-          "https://blog.jrrecyclingsolutionsltd.com.bd/wp-json/wp/v2/posts"
-        );
-        setPosts(response.data);
-        const urls = {};
-        await Promise.all(
-          response.data.map(async (post) => {
-            if (post.featured_media) {
-              const imageUrl = await getImageUrl(post.featured_media);
-              urls[post.featured_media] = imageUrl;
-            }
-          })
-        );
-        setImageUrls(urls);
+        const response = await axios.get(BLOG_API_URL, {
+          params: { page: 1, page_size: 4 },
+        });
+        setPosts(response.data.results.map(fixPostImages));
       } catch (error) {
         console.error("Error fetching posts:", error);
       }
@@ -48,12 +26,13 @@ function NewsAndUpdate() {
     fetchPosts();
   }, []);
 
-  const FinalDate = (gmtDateStr) => {
-    var gmtDate = new Date(gmtDateStr);
+  const FinalDate = (isoDateStr) => {
+    if (!isoDateStr) return "";
+    var date = new Date(isoDateStr);
 
-    var month = gmtDate.toLocaleString("default", { month: "long" });
-    var day = gmtDate.getUTCDate();
-    var year = gmtDate.getUTCFullYear();
+    var month = date.toLocaleString("default", { month: "long" });
+    var day = date.getUTCDate();
+    var year = date.getUTCFullYear();
 
     var normalDateStr = month + " " + day + ", " + year;
 
@@ -103,37 +82,32 @@ function NewsAndUpdate() {
         {posts.slice(0, 4).map((data, index) => (
           <Slide key={index}>
             <div className="flex flex-col overflow-hidden rounded-xl laptop:w-[350px] mobile:w-full bg-white shadow-xl hover:shadow-2xl transition-all">
-              <Image
-                loading="eager"
-                width={300}
-                height={300}
-                src={imageUrls[data.featured_media]}
-                alt={data.title.rendered}
-                className="h-[200px] w-full object-cover"
-              />
+              {data.featured_image_url ? (
+                <Image
+                  loading="eager"
+                  width={300}
+                  height={300}
+                  src={data.featured_image_url}
+                  alt={data.featured_image_alt || data.title}
+                  className="h-[200px] w-full object-cover"
+                />
+              ) : (
+                <div className="h-[200px] w-full bg-gray-200" />
+              )}
 
               <div className="flex flex-col flex-grow">
                 <div className="px-[6%] py-[6%] flex flex-col flex-grow">
                   <p className="font-bold text-xl tablet:text-[26px] leading-8 text-[#39B54A] line-clamp-3 ">
-                    {data.title.rendered}
+                    {data.title}
                   </p>
 
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: data.excerpt.rendered,
-                    }}
-                    className="my-[5%] max-h-[140px] overflow-hidden line-clamp-3 text-black/70 font-medium"
-                  ></p>
+                  {data.excerpt && (
+                    <p className="my-[5%] max-h-[140px] overflow-hidden line-clamp-3 text-black/70 font-medium">
+                      {data.excerpt}
+                    </p>
+                  )}
                   <Link
-                    href={{
-                      pathname: `/blog/${data.slug}`,
-                      query: {
-                        desc: data.excerpt.rendered,
-                        title: data.title.rendered,
-                        date: FinalDate(data.date),
-                        image: imageUrls[data.featured_media],
-                      },
-                    }}
+                    href={`/blog/${data.slug}`}
                     className="flex mt-auto w-[80%] bg-[#43AC4D] hover:bg-[#7ABD4C] text-white/75 hover:text-white transition-all px-[10px] rounded-md space-x-2 place-items-center"
                   >
                     <p className="font-[600] text-lg laptop:text-[24px]">
@@ -157,7 +131,7 @@ function NewsAndUpdate() {
                 </div>
                 <div className="w-full h-[1px] bg-black/30" />
                 <p className="px-[6%] py-[2%] font-bold text-[20px] text-black/50">
-                  {FinalDate(data.date)}
+                  {FinalDate(data.published_at)}
                 </p>
               </div>
             </div>

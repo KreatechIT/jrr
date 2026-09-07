@@ -10,6 +10,7 @@ import { usePathname } from "next/navigation";
 import jrlogo from "@/assets/jr-recycling-logo.png";
 import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
+import { BLOG_API_URL } from "@/customFunctions/blogApi";
 
 const Paths = [
   { name: "Home", path: "/" },
@@ -116,9 +117,9 @@ const Header = () => {
 
   useEffect(() => {
     axios
-      .get("https://blog.jrrecyclingsolutionsltd.com.bd/wp-json/wp/v2/posts")
+      .get(BLOG_API_URL, { params: { page: 1, page_size: 50 } })
       .then((response) => {
-        setPosts(response.data);
+        setPosts(response.data.results);
       })
       .catch((error) => {
         console.error("Error fetching posts:", error);
@@ -127,7 +128,7 @@ const Header = () => {
 
   useEffect(() => {
     const results = posts.filter((post) =>
-      post.title.rendered.toLowerCase().includes(searchTerm.toLowerCase())
+      post.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
     const route_search_results = Paths.filter((path) =>
       path.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -279,7 +280,7 @@ const Header = () => {
                           className="flex bg-white transition-all hover:translate-x-[7px] hover:bg-[#43AC4D] hover:text-white rounded-md  w-full h-[60px]  place-content-start place-items-center"
                         >
                           <p className="text-[20px] text-black p-[10px]">
-                            {data.title.rendered}
+                            {data.title}
                           </p>
                         </Link>
                       ))}
