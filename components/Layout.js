@@ -1,13 +1,41 @@
 import React from "react";
 import { Slide } from "react-awesome-reveal";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import bgImage from "@/assets/jr recycling waste managenent system.jpg";
 import Image from "next/image";
 import FloatingButton from "./FloatingButtons";
 
+const SITE_URL = "https://jrrecyclingsolutionsltd.com.bd";
+
 function Layout({ title, bg }) {
+  const pathname = usePathname();
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: SITE_URL + "/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: title,
+        item: SITE_URL + pathname,
+      },
+    ],
+  };
+
   return (
     <div className="bg-[#1D7773] relative overflow-hidden flex-col w-full h-[540px] flex justify-center items-center content-center justify-items-center">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Image
         loading="eager"
         src={bg ? bg : bgImage}

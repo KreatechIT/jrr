@@ -4,8 +4,14 @@ Disallow: /application/
 Disallow: /src/
 Disallow: /storage/
 Disallow: /system/
+Disallow: /shopping/
+Disallow: /item/
+Disallow: /shop/
 
 User-agent: Googlebot
+Disallow: /shopping/
+Disallow: /item/
+Disallow: /shop/
 Allow: /
 
 User-agent: Google-Extended

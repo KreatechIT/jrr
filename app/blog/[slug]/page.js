@@ -55,6 +55,7 @@ async function Page({ params }) {
         title={post.h1_title || post.title}
         date={FinalDate(post.published_at)}
         description={post.body}
+        slug={post.slug}
       />
       <section className="py-[5%] flex mobile:flex-col laptop:flex-row justify-between px-[5%]">
         <div className="mr-[1%] text-clip text-wrap mobile:w-full laptop:w-[70%]">

@@ -1,5 +1,6 @@
 import React from "react";
 import { Slide } from "react-awesome-reveal";
+import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar } from "@fortawesome/free-solid-svg-icons";
@@ -7,9 +8,40 @@ import FloatingButton from "./FloatingButtons";
 
 import bg from "@/assets/jr-recycling-workers.jpg";
 
-function BlogLayout({ title, date, description }) {
+const SITE_URL = "https://jrrecyclingsolutionsltd.com.bd";
+
+function BlogLayout({ title, date, description, slug }) {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: SITE_URL + "/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: SITE_URL + "/blog",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: title,
+        item: SITE_URL + "/blog/" + slug,
+      },
+    ],
+  };
+
   return (
     <div className="bg-[#1D7773] relative overflow-hidden flex-col w-full h-[540px] flex justify-center items-center content-center justify-items-center">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Image
         loading="eager"
         src={bg}
@@ -26,6 +58,21 @@ function BlogLayout({ title, date, description }) {
         </p>
       </Slide>
       <Slide direction="up">
+        <div className="flex p-4 justify-center flex-wrap">
+          <Link
+            href="/"
+            className="text-white transition-colors cursor-pointer hover:text-[#39B54A] font-medium text-lg"
+          >
+            Home
+          </Link>
+          <span className="mx-1 text-white">/</span>
+          <Link
+            href="/blog"
+            className="text-white transition-colors cursor-pointer hover:text-[#39B54A] font-medium text-lg"
+          >
+            Blog
+          </Link>
+        </div>
         <div className="flex mt-[20px] place-items-center space-x-[10px]">
           <FontAwesomeIcon
             icon={faCalendar}
