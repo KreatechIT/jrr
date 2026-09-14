@@ -13,6 +13,7 @@ function AboutUs() {
       <Layout
         title="E-Waste Recycling"
         bg="/services/jr-recycling-pic-4.jpg"
+        path="/services/e-waste-recycling"
       />
       <section className="px-[5%] transition-all py-[3%] flex laptop:flex-row mobile:flex-col-reverse place-items-start">
         <div className="laptop:w-[50%] mobile:w-full transition-all h-auto">

@@ -79,6 +79,7 @@ function Page() {
       <Layout
         title="Video Gallery"
         bg="/backgrounds/13.jpeg"
+        path="/gallery/video-gallery"
       />
       <section className="px-[5%] transition-all flex flex-col justify-center items-center place-items-start">
         <div className="w-[100%] px-[10px] transition-all h-auto">

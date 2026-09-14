@@ -15,6 +15,7 @@ function AboutUs() {
       <Layout
         title="Data Destructions / Data Elimination"
         bg="/services/jr-recycling-pic-18.jpg"
+        path="/services/data-destructions"
       />
       <section className="px-[5%] mt-[20px] transition-all space-x-[50px] py-[3%] flex laptop:flex-row mobile:flex-col place-items-start">
         <div className="laptop:w-[50%] mobile:w-full transition-all h-auto">

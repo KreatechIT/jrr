@@ -16,6 +16,7 @@ function AboutUs() {
       <Layout
         title="Internship"
         bg="/services/WhatsApp-Image-2022-08-28-at-5.29.42-PM-1024x768-1.jpeg"
+        path="/services/internship"
       />
       <section className="px-[6%] transition-all space-x-[20px] py-[3%] flex laptop:flex-row mobile:flex-col place-items-start">
         <div className="mobile:w-full laptop:w-[50%] transition-all h-auto">

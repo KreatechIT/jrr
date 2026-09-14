@@ -127,6 +127,7 @@ function Page() {
       <Layout
         title="Events Gallery"
         bg="/backgrounds/9.jpeg"
+        path="/gallery/events-gallery"
       />
       <section className="px-[5%] mt-[40px] transition-all  flex flex-col justify-center items-center place-items-start">
         <div className="w-[100%] px-[10px] transition-all h-auto">

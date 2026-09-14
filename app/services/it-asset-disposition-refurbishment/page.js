@@ -27,6 +27,7 @@ function AboutUs() {
       <Layout
         title="IT Asset Disposition & Refurbishment"
         bg="/projects/1-1.jpg"
+        path="/services/it-asset-disposition-refurbishment"
       />
       <section className="px-[5%] mt-[20px] transition-all space-x-[20px] py-[3%] flex laptop:flex-row mobile:flex-col place-items-start">
         <div className="laptop:w-[50%] mobile:w-full transition-all h-auto">

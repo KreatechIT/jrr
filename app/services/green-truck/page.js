@@ -14,6 +14,7 @@ function AboutUs() {
       <Layout
         title="Green Truck"
         bg="/services/What-Can-Bangladeshi-Companies-Do-To-Ensure-Secure-Data-Destruction.jpg"
+        path="/services/green-truck"
       />
       <section className="px-4 transition-all py-[3%]">
         <div className="relative justify-center items-center tablet:w-[50%] flex mx-auto">

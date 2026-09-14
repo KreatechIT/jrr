@@ -10,6 +10,7 @@ function Page() {
       <Layout
         title="Paper Cut"
         bg="/backgrounds/profile_show.jpg"
+        path="/gallery/paper-cut"
       />
 
       <section className="px-[5%] transition-all flex flex-col justify-center items-center place-items-start">

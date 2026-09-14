@@ -106,6 +106,7 @@ function Page() {
       <Layout
         title="Our Work"
         bg="/backgrounds/8.jpeg"
+        path="/our-work"
       />
       <section className="p-[5%] mx-auto flex">
         <div className="w-full">

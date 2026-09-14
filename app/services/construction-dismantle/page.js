@@ -16,6 +16,7 @@ function AboutUs() {
       <Layout
         title="Construction & Dismantle"
         bg="/services/jr-recycling-pic-5.jpg"
+        path="/services/construction-dismantle"
       />
       <section className="px-[6%] transition-all space-x-[20px] py-[3%] flex laptop:flex-row mobile:flex-col place-items-start">
         <div className="mobile:w-full laptop:w-[50%] transition-all h-auto">

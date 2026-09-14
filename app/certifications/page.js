@@ -96,6 +96,7 @@ function Page() {
       <Layout
         title="Certifications"
         bg="/backgrounds/certificate.jpg"
+        path="/certifications"
       />
       <section className="p-[5%] mx-auto flex justify-center items-center">
         <div>

@@ -22,7 +22,7 @@ const BlogCardSkeleton = () => (
 function Loading() {
   return (
     <div className="flex flex-col place-content-center place-items-center">
-      <Layout title="Blog" bg="/backgrounds/16.jpeg" />
+      <Layout title="Blog" bg="/backgrounds/16.jpeg" path="/blog" />
       <section className="py-[5%] px-[5%] min-h-[500px] w-full max-w-[1400px]">
         <div className="mt-[60px] grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 gap-8">
           {Array.from({ length: 9 }).map((_, index) => (

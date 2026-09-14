@@ -17,6 +17,7 @@ function AboutUs() {
       <Layout
         title="About Us"
         bg="/backgrounds/09.jpg"
+        path="/about-us"
       />
       <section className="p-[5%] flex laptop:flex-row mobile:flex-col place-items-start">
         <div className="relative mb-[70px] laptop:w-[50%] mobile:w-full mobile:h-[400px] laptop:h-[700px]">

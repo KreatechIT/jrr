@@ -147,6 +147,7 @@ function Page() {
       <Layout
         title="Our Team"
         bg="/team/jr-enterprise.jpg"
+        path="/team"
       />
       <section className="p-[3%] mt-[20px] mx-auto flex justify-center items-center">
         <div>

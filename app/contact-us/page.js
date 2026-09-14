@@ -63,6 +63,7 @@ function ContactUs() {
       <Layout
         title="Contact Us"
         bg="/backgrounds/17.jpeg"
+        path="/contact-us"
       />
       <section className="py-[5%] px-[3%]">
         <div className="flex laptop:flex-row mobile:flex-col place-items-center mobile:space-y-[30px] laptop:space-y-0 mobile:space-x-0 laptop:space-x-[30px]">

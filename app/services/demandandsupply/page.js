@@ -16,6 +16,7 @@ function AboutUs() {
       <Layout
         title="Demand & Supply"
         bg="/services/jr-recycling-pic-8.jpg"
+        path="/services/demandandsupply"
       />
       <section className="px-[5%] transition-all py-[3%] flex laptop:flex-row mobile:flex-col place-items-start">
         <div className="laptop:w-[50%] mobile:w-full transition-all h-auto">

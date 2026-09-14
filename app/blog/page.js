@@ -42,7 +42,7 @@ async function Page({ searchParams }) {
 
   return (
     <div className="flex flex-col place-content-center place-items-center">
-      <Layout title="Blog" bg="/backgrounds/16.jpeg" />
+      <Layout title="Blog" bg="/backgrounds/16.jpeg" path="/blog" />
       <section className="py-[5%] px-[5%] min-h-[500px] w-full max-w-[1400px]">
         {error ? (
           <div className="flex flex-col items-center justify-center min-h-[400px]">

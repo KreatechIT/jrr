@@ -56,7 +56,7 @@ function Page() {
   }, [baseUrl]);
   return (
     <div className="">
-      <Layout title="Others Image" bg={bg} />
+      <Layout title="Others Image" bg={bg} path="/gallery/others-image" />
 
       <section className="px-[5%] transition-all flex flex-col justify-center items-center place-items-start">
         <div className="w-[100%] px-[10px] transition-all h-auto">
