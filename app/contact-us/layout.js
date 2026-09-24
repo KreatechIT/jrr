@@ -7,6 +7,17 @@ export const metadata = {
   alternates: {
     canonical: "https://jrrecyclingsolutionsltd.com.bd/contact-us",
   },
+  openGraph: {
+    title: "Best E-Waste Recycling near Me-JR Recycling | Contact Us",
+    description:
+      "For the best e-waste recycling services, please call us today or send an image through our various communication channels. Receive a free quote!",
+    url: "https://jrrecyclingsolutionsltd.com.bd/contact-us",
+  },
+  twitter: {
+    title: "Best E-Waste Recycling near Me-JR Recycling | Contact Us",
+    description:
+      "For the best e-waste recycling services, please call us today or send an image through our various communication channels. Receive a free quote!",
+  },
 };
 
 function layout({ children }) {

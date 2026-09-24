@@ -7,6 +7,17 @@ export const metadata = {
   alternates: {
     canonical: "https://jrrecyclingsolutionsltd.com.bd/services/internship",
   },
+  openGraph: {
+    title: "Internship In Bangladesh | JR Recycling Solutions BD Team",
+    description:
+      "Apply for an internship in Bangladesh at JR Recycling Solutions and gain practical experience in e-waste recycling, sustainability and green operations BD.",
+    url: "https://jrrecyclingsolutionsltd.com.bd/services/internship",
+  },
+  twitter: {
+    title: "Internship In Bangladesh | JR Recycling Solutions BD Team",
+    description:
+      "Apply for an internship in Bangladesh at JR Recycling Solutions and gain practical experience in e-waste recycling, sustainability and green operations BD.",
+  },
 };
 
 function layout({ children }) {

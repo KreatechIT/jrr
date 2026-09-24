@@ -6,6 +6,17 @@ export const metadata = {
   alternates: {
     canonical: "https://jrrecyclingsolutionsltd.com.bd/blog",
   },
+  openGraph: {
+    title: "E-Waste Recycling Blogs | JR Recycling Solutions BD Team",
+    description:
+      "Read e-waste recycling blogs from JR Recycling Solutions for tips, updates and insights on safe electronics disposal, recycling, sustainability and news.",
+    url: "https://jrrecyclingsolutionsltd.com.bd/blog",
+  },
+  twitter: {
+    title: "E-Waste Recycling Blogs | JR Recycling Solutions BD Team",
+    description:
+      "Read e-waste recycling blogs from JR Recycling Solutions for tips, updates and insights on safe electronics disposal, recycling, sustainability and news.",
+  },
 };
 function layout({ children }) {
   return <div>{children}</div>;

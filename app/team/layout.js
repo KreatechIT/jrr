@@ -7,6 +7,17 @@ export const metadata = {
   alternates: {
     canonical: "https://jrrecyclingsolutionsltd.com.bd/team",
   },
+  openGraph: {
+    title: "JR E-Waste Recycling Teams | JR Recycling Bangladesh BD",
+    description:
+      "Meet JR e-waste recycling teams in Bangladesh, experienced professionals delivering safe e-waste collection, dismantling, recycling and disposal support now.",
+    url: "https://jrrecyclingsolutionsltd.com.bd/team",
+  },
+  twitter: {
+    title: "JR E-Waste Recycling Teams | JR Recycling Bangladesh BD",
+    description:
+      "Meet JR e-waste recycling teams in Bangladesh, experienced professionals delivering safe e-waste collection, dismantling, recycling and disposal support now.",
+  },
 };
 
 function layout({ children }) {

@@ -11,12 +11,31 @@ const roboto = Roboto({
   subsets: ["latin"],
 });
 
+const SITE_URL = "https://jrrecyclingsolutionsltd.com.bd/";
+const DEFAULT_TITLE = "E-Waste Recycling And Management | JR Recycling Solutions BD";
+const DEFAULT_DESCRIPTION =
+  "Choose JR Recycling Solutions for e-waste recycling and management in Bangladesh, with safe collection, processing, recycling and disposal support for firms.";
+
 export const metadata = {
-  title: "E-Waste Recycling And Management | JR Recycling Solutions BD",
-  description:
-    "Choose JR Recycling Solutions for e-waste recycling and management in Bangladesh, with safe collection, processing, recycling and disposal support for firms.",
+  title: DEFAULT_TITLE,
+  description: DEFAULT_DESCRIPTION,
   alternates: {
-    canonical: "https://jrrecyclingsolutionsltd.com.bd/",
+    canonical: SITE_URL,
+  },
+  openGraph: {
+    type: "website",
+    siteName: "Jr recycling solution Ltd",
+    url: SITE_URL,
+    title: "Jr Recycling Is the Best E-Waste Recycling Company in Bangladesh",
+    description:
+      "JR Recycling Solution Ltd, the best e-waste recycling company, is pioneering in addressing Dhaka's e-waste crisis through innovative recycling and disposal solutions.",
+    images: [`${SITE_URL}jr.png`],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@jrrecycling",
+    description:
+      "At jr recycling solution ltd, we offer top-notch, eco-friendly e-waste management services across bangladesh, ensuring safe and efficient recycling of all electronic waste.",
   },
 };
 
@@ -24,43 +43,6 @@ export default function RootLayout({ children, params }) {
   return (
     <html lang="en">
       <head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@jrrecycling" />
-        <meta
-          name="twitter:description"
-          content="At jr recycling solution ltd, we offer top-notch, eco-friendly e-waste management services across bangladesh, ensuring safe and efficient recycling of all electronic waste."
-        />
-        <meta
-          name="twitter:app:name:iphone"
-          content="Jrrecycling solution ltd"
-        />
-        <meta name="twitter:app:id:iphone" content="" />
-        <meta name="twitter:app:name:ipad" content="Jrrecycling solution ltd" />
-        <meta name="twitter:app:id:ipad" content="" />
-        <meta
-          name="twitter:app:name:googleplay"
-          content="Jrrecycling solution ltd"
-        />
-        <meta name="twitter:app:id:googleplay" content="" />
-        <meta name="twitter:app:country" content="Bangladesh" />
-
-        <meta
-          property="og:title"
-          content="Jr Recycling Is the Best E-Waste Recycling Company in Bangladesh"
-        />
-        <meta property="og:site_name" content="Jr recycling solution Ltd" />
-        <meta
-          property="og:url"
-          content="https://jrrecyclingsolutionsltd.com.bd/"
-        />
-        <meta
-          property="og:description"
-          content="JR Recycling Solution Ltd, the best e-waste recycling company, is pioneering in addressing Dhaka's e-waste crisis through innovative recycling and disposal solutions."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="URL to your image here" />
         <Script
           id="gtm-script"
           strategy="afterInteractive"

@@ -8,6 +8,17 @@ export const metadata = {
     canonical:
       "https://jrrecyclingsolutionsltd.com.bd/services/construction-dismantle",
   },
+  openGraph: {
+    title: "Construction Dismantle In Bangladesh | JR Recycling Solutions",
+    description:
+      "JR Recycling Solutions provides construction dismantle in Bangladesh with safe site clearing, material recovery, dismantling support and responsible recycling.",
+    url: "https://jrrecyclingsolutionsltd.com.bd/services/construction-dismantle",
+  },
+  twitter: {
+    title: "Construction Dismantle In Bangladesh | JR Recycling Solutions",
+    description:
+      "JR Recycling Solutions provides construction dismantle in Bangladesh with safe site clearing, material recovery, dismantling support and responsible recycling.",
+  },
 };
 
 function layout({ children }) {

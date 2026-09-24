@@ -7,6 +7,17 @@ export const metadata = {
   alternates: {
     canonical: "https://jrrecyclingsolutionsltd.com.bd/gallery/events-gallery",
   },
+  openGraph: {
+    title: "Event Gallery Of E-Waste Recycling | JR Solutions BD Team",
+    description:
+      "View the event gallery of e-waste recycling at JR Recycling Solutions, featuring awareness events, collection programs and sustainability activities today.",
+    url: "https://jrrecyclingsolutionsltd.com.bd/gallery/events-gallery",
+  },
+  twitter: {
+    title: "Event Gallery Of E-Waste Recycling | JR Solutions BD Team",
+    description:
+      "View the event gallery of e-waste recycling at JR Recycling Solutions, featuring awareness events, collection programs and sustainability activities today.",
+  },
 };
 
 function layout({ children }) {

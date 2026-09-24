@@ -12,9 +12,9 @@ function Tag({ tag }) {
         height={60}
         alt="jr-recycling-solution-ltd-wastebin"
       />
-      <h1 className="text-[#39B54A] text-xl font-bold mt-[17px] uppercase">
+      <p className="text-[#39B54A] text-xl font-bold mt-[17px] uppercase">
         {tag}
-      </h1>
+      </p>
     </div>
   );
 }

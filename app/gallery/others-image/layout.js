@@ -7,6 +7,17 @@ export const metadata = {
   alternates: {
     canonical: "https://jrrecyclingsolutionsltd.com.bd/gallery/others-image",
   },
+  openGraph: {
+    title: "photos of e-waste management process-Jr Recycling Solution Ltd",
+    description:
+      "Jr Recycling Solution LTD is an E-waste Recycling company in Bangladesh. Started its journey in 2011. We prioritize environmental and personal safety precautions.",
+    url: "https://jrrecyclingsolutionsltd.com.bd/gallery/others-image",
+  },
+  twitter: {
+    title: "photos of e-waste management process-Jr Recycling Solution Ltd",
+    description:
+      "Jr Recycling Solution LTD is an E-waste Recycling company in Bangladesh. Started its journey in 2011. We prioritize environmental and personal safety precautions.",
+  },
 };
 
 function layout({ children }) {

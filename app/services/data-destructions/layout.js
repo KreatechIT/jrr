@@ -8,6 +8,17 @@ export const metadata = {
     canonical:
       "https://jrrecyclingsolutionsltd.com.bd/services/data-destructions",
   },
+  openGraph: {
+    title: "Data Destructions In Bangladesh | JR Recycling Solutions",
+    description:
+      "Protect your business with data destructions in Bangladesh by JR Recycling Solutions, including secure handling, disposal and responsible e-waste recycling.",
+    url: "https://jrrecyclingsolutionsltd.com.bd/services/data-destructions",
+  },
+  twitter: {
+    title: "Data Destructions In Bangladesh | JR Recycling Solutions",
+    description:
+      "Protect your business with data destructions in Bangladesh by JR Recycling Solutions, including secure handling, disposal and responsible e-waste recycling.",
+  },
 };
 
 function layout({ children }) {

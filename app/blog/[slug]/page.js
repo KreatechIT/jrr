@@ -14,14 +14,33 @@ const FinalDate = (isoDateStr) => {
   return `${month} ${day}, ${year}`;
 };
 
+const descriptionFromBody = (html) => {
+  if (!html) return undefined;
+  const text = html
+    .replace(/<[^>]*>/g, " ")
+    .replace(/&nbsp;/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!text) return undefined;
+  if (text.length <= 155) return text;
+  return `${text.slice(0, 155).replace(/\s+\S*$/, "")}…`;
+};
+
 export async function generateMetadata({ params }) {
   const post = await fetchPostBySlug(params.slug);
   if (!post) {
-    return { title: "Blog Not Found | JR Recycling Solutions BD" };
+    return {
+      title: "Blog Not Found | JR Recycling Solutions BD",
+      openGraph: { title: "Blog Not Found | JR Recycling Solutions BD" },
+      twitter: { title: "Blog Not Found | JR Recycling Solutions BD" },
+    };
   }
 
   const metaTitle = post.seo?.meta_title || post.title;
-  const metaDescription = post.seo?.meta_description || post.excerpt || undefined;
+  const metaDescription =
+    post.seo?.meta_description ||
+    post.excerpt ||
+    descriptionFromBody(post.body);
   const canonicalUrl = `https://jrrecyclingsolutionsltd.com.bd/blog/${post.slug}`;
   const ogImage = post.seo?.og_image_url || post.featured_image_url || undefined;
 
@@ -38,6 +57,11 @@ export async function generateMetadata({ params }) {
       description: post.seo?.og_description || metaDescription,
       images: ogImage ? [ogImage] : undefined,
       publishedTime: post.published_at || undefined,
+    },
+    twitter: {
+      title: post.seo?.og_title || metaTitle,
+      description: post.seo?.og_description || metaDescription,
+      images: ogImage ? [ogImage] : undefined,
     },
   };
 }

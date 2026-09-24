@@ -7,6 +7,17 @@ export const metadata = {
   alternates: {
     canonical: "https://jrrecyclingsolutionsltd.com.bd/our-work",
   },
+  openGraph: {
+    title: "E-Waste Services In Bangladesh | JR Recycling Solutions",
+    description:
+      "Discover e-waste services in Bangladesh from JR Recycling Solutions, including collection, dismantling, data destruction, recycling and safe disposal today.",
+    url: "https://jrrecyclingsolutionsltd.com.bd/our-work",
+  },
+  twitter: {
+    title: "E-Waste Services In Bangladesh | JR Recycling Solutions",
+    description:
+      "Discover e-waste services in Bangladesh from JR Recycling Solutions, including collection, dismantling, data destruction, recycling and safe disposal today.",
+  },
 };
 
 function layout({ children }) {
