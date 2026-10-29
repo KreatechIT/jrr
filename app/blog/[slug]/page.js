@@ -1,9 +1,19 @@
 import BlogLayout from "@/components/BlogLayout";
 import Image from "next/image";
 import LatestArticles from "@/components/LatestArticles";
-import { fetchPostBySlug } from "@/customFunctions/blogApi";
+import { fetchPostBySlug, fetchSitemapPosts } from "@/customFunctions/blogApi";
 import { notFound } from "next/navigation";
 import "@/customCSS/blog.css";
+
+export const revalidate = 60;
+
+// Pre-render every known post at build time so crawls hit static HTML and
+// don't depend on the blog API being up. Posts published later render on
+// first request (dynamicParams defaults to true) and are then cached.
+export async function generateStaticParams() {
+  const posts = await fetchSitemapPosts();
+  return posts.filter((post) => post.slug).map((post) => ({ slug: post.slug }));
+}
 
 const FinalDate = (isoDateStr) => {
   if (!isoDateStr) return "";

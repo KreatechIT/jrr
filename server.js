@@ -1,7 +1,9 @@
 const next = require('next');
 const http = require('http');
 
-const dev = process.env.NODE_ENV !== 'production';
+// Passenger doesn't set NODE_ENV, so default to production and only run the
+// dev server when explicitly asked (NODE_ENV=development).
+const dev = process.env.NODE_ENV === 'development';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
