@@ -16,6 +16,14 @@ function Footer() {
       <div className="flex w-[90%] space-x-6 justify-between border-white/55 pb-[20px] border-b-[1px]">
         <div className="w-[500px] flex flex-col">
           <p className="font-[700] text-[23px] py-[5px] border-white border-b-[1px] text-white">
+            Head Office
+          </p>
+          <p className="text-white py-[20px]">
+            69 (5th Floor), Master Para Road, Barabag, Mirpur-2, Dhaka-1216
+          </p>
+        </div>
+        <div className="w-[500px] flex flex-col">
+          <p className="font-[700] text-[23px] py-[5px] border-white border-b-[1px] text-white">
             Corporate Office
           </p>
           <p className="text-white py-[20px]">

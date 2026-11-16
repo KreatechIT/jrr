@@ -66,7 +66,43 @@ function ContactUs() {
         path="/contact-us"
       />
       <section className="py-[5%] px-[3%]">
-        <div className="flex laptop:flex-row mobile:flex-col place-items-center mobile:space-y-[30px] laptop:space-y-0 mobile:space-x-0 laptop:space-x-[30px]">
+        <div className="flex laptop:flex-row laptop:flex-wrap laptop:justify-center mobile:flex-col place-items-start mobile:gap-y-[30px] laptop:gap-[30px]">
+          <Slide triggerOnce direction="up" duration={2000}>
+            <div className="space-y-[30px]">
+              <div className="bg-[#F6F9FF] px-[2%] space-x-[20px] flex place-items-center  h-[120px] shadow-xl hover:shadow-2xl transition-all">
+                <div className="bg-[#39B54A] flex place-content-center place-items-center w-[60px] h-[60px] rounded-full">
+                  <FontAwesomeIcon
+                    icon={faLocationCrosshairs}
+                    color="white"
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                    }}
+                  />
+                </div>
+                <div>
+                  <p className="text-black text-[24px] font-bold">
+                    Head Office
+                  </p>
+                  <div className="mt-[2px] font-bold text-black/60">
+                    <p className="font-lato text-[15px] ">
+                      69 (5th Floor), Master Para Road, Barabag, Mirpur-2,
+                      Dhaka-1216.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116796.62062625769!2d90.36066845946345!3d23.822354055699876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0da425f190d%3A0x55a15bc8ccbb9487!2sJr%20Enterprise!5e0!3m2!1sen!2sbd!4v1680492844140!5m2!1sen!2sbd"
+                width="565"
+                height="350"
+                className="h-[321px] mobile:w-full laptop:w-[565px]"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </Slide>
           <Slide triggerOnce direction="up" duration={2000}>
             <div className="space-y-[30px]">
               <div className="bg-[#F6F9FF] px-[2%] space-x-[20px] flex place-items-center  h-[120px] shadow-xl hover:shadow-2xl transition-all">
