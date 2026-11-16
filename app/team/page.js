@@ -53,9 +53,9 @@ const Items = [
   //   post: "Assistant Manager, Business Development & Digital Marketing",
   // },
   {
-    image: "/team/Officer.png",
-    title: "Farzana Khanam",
-    post: "Officer, Accounts & Finance",
+    image: "/team/Mahbubur-Rahman.jpg",
+    title: "Mahbubur Rahman",
+    post: "Manager, Accounts",
   },
   {
     image: "/team/Engineer.png",

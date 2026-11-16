@@ -5,7 +5,7 @@ const Counter = () => {
   const [counterOn, setCounterOn] = useState(false);
   const elements = [
     {
-      end: 12,
+      end: 15,
       text: "Years Glorious Journey",
     },
     {
