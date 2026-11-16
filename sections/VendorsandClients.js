@@ -29,7 +29,7 @@ function VendorsandClients() {
       items: [
         "/logos/Bangladesh-army.jpg",
         "/logos/rab.png",
-        "/logos/police.png",
+        "/logos/police-emblem.png",
         "/logos/nsi.png",
         "/logos/Bangladesh-Bank.jpg",
         "/logos/civil-aviation-authority-logo.jpg",

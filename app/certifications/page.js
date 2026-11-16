@@ -52,7 +52,7 @@ const Permissions = [
   },
   {
     title: "Bangladesh Police",
-    image: "/logos/Bangladesh-police.png",
+    image: "/logos/Bangladesh-police-emblem.png",
     alt: "Police-logo",
   },
   {
