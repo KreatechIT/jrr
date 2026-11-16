@@ -82,18 +82,18 @@ function ContactUs() {
                 </div>
                 <div>
                   <p className="text-black text-[24px] font-bold">
-                    Head Office
+                    Corporate Office
                   </p>
                   <div className="mt-[2px] font-bold text-black/60">
                     <p className="font-lato text-[15px] ">
-                      69 (5th Floor), Master Para Road, Barabag, Mirpur-2,
-                      Dhaka-1216.
+                      House No-150, Road No-1, Avenue-1, Mirpur DOHS,
+                      Dhaka.
                     </p>
                   </div>
                 </div>
               </div>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116796.62062625769!2d90.36066845946345!3d23.822354055699876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0da425f190d%3A0x55a15bc8ccbb9487!2sJr%20Enterprise!5e0!3m2!1sen!2sbd!4v1680492844140!5m2!1sen!2sbd"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58397.03104264284!2d90.27095357932357!3d23.825196626235716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c1413fb7cc87%3A0xec438b86897d591c!2sJR%20Recycling%20Solutions%20Ltd%20%7C%20E-Waste%20Collection%20-%20Head%20Office!5e0!3m2!1sen!2sbd!4v1794809552557!5m2!1sen!2sbd"
                 width="565"
                 height="350"
                 className="h-[321px] mobile:w-full laptop:w-[565px]"
@@ -128,7 +128,7 @@ function ContactUs() {
               </div>
 
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.1642133673636!2d90.2678771831642!3d23.84830189740768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755ea2515b0cc9f%3A0x1a5bc0d532ea33b4!2sRajashon!5e0!3m2!1sen!2sbd!4v1680505396314!5m2!1sen!2sbd"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58386.804313371955!2d90.1855067216797!3d23.847909200000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755eb5e8bea7a6b%3A0x7ef4018c263765b2!2sJR%20Recycling%20Solutions%20Ltd%20%7C%20E-Waste%20Collection%20-%20Warehouse!5e0!3m2!1sen!2sbd!4v1794809693536!5m2!1sen!2sbd"
                 width="565"
                 height="350"
                 className="h-[321px] mobile:w-full laptop:w-[565px]"
