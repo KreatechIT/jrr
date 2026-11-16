@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" role="img" aria-label="JR Recycling dump truck unloading e-waste">
+  <defs>
+    <g id="arrow">
+      <path d="M4.9 -27.6 A28 28 0 0 1 26.3 9.6" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+      <polygon points="23.2,18.1 32.9,12 19.7,7.2" fill="#fff"/>
+    </g>
+    <g id="wheel">
+      <circle r="40" fill="#2b2f33"/>
+      <circle r="22" fill="#cfd5da"/>
+      <circle r="8" fill="#2b2f33"/>
+    </g>
+    <g id="monitor">
+      <rect x="0" y="0" width="52" height="38" rx="4" fill="#4a5056"/>
+      <rect x="5" y="5" width="42" height="26" rx="2" fill="#9fd6e8"/>
+    </g>
+    <g id="box">
+      <rect width="46" height="32" rx="3" fill="#c9a36b"/>
+      <rect x="18" width="9" height="32" fill="#e6cfa3"/>
+    </g>
+  </defs>
+
+  <!-- ground -->
+  <rect x="10" y="338" width="700" height="6" rx="3" fill="#d9ead3"/>
+
+  <!-- trees -->
+  <g transform="translate(34 338)">
+    <rect x="-5" y="-70" width="10" height="70" rx="3" fill="#8d6e4a"/>
+    <circle cx="0" cy="-92" r="30" fill="#39B54A"/><circle cx="-20" cy="-74" r="19" fill="#2e9a3d"/><circle cx="20" cy="-74" r="19" fill="#2e9a3d"/>
+  </g>
+  <g transform="translate(694 338)">
+    <rect x="-4" y="-40" width="8" height="40" rx="3" fill="#8d6e4a"/>
+    <circle cx="0" cy="-54" r="20" fill="#39B54A"/><circle cx="-13" cy="-42" r="13" fill="#2e9a3d"/><circle cx="13" cy="-42" r="13" fill="#2e9a3d"/>
+  </g>
+
+  <!-- e-waste pile on the ground -->
+  <g transform="translate(40 0)">
+    <path d="M70 338 L90 296 L130 274 L170 280 L205 300 L236 338 Z" fill="#9aa3aa"/>
+    <use href="#monitor" transform="translate(88 292) rotate(-14 26 19)"/>
+    <use href="#box" transform="translate(150 296) rotate(10 23 16)"/>
+    <rect x="120" y="318" width="64" height="12" rx="3" fill="#2b2f33" transform="rotate(-6 152 324)"/>
+    <use href="#monitor" transform="translate(172 306) rotate(18 26 19) scale(.8)"/>
+    <rect x="212" y="312" width="22" height="26" rx="3" fill="#2e9a3d"/>
+    <rect x="76" y="322" width="38" height="16" rx="3" fill="#6b7279"/>
+  </g>
+
+  <!-- do not litter sign -->
+  <g>
+    <rect x="91" y="170" width="7" height="168" rx="3" fill="#6b7279"/>
+    <path d="M95 96 L142 178 H48 Z" fill="#fff" stroke="#d93a3a" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M85 124 L105 144 M105 124 L85 144" stroke="#d93a3a" stroke-width="5" stroke-linecap="round"/>
+    <text x="95" y="160" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="9" fill="#2b2f33">DO NOT</text>
+    <text x="95" y="171" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="9" fill="#2b2f33">LITTER</text>
+  </g>
+
+  <!-- items falling from the truck -->
+  <g>
+    <g stroke="#cfd5da" stroke-width="3" stroke-linecap="round" opacity=".8">
+      <line x1="236" y1="205" x2="226" y2="222"/><line x1="214" y1="238" x2="206" y2="252"/>
+      <line x1="188" y1="226" x2="182" y2="238"/><line x1="170" y1="258" x2="165" y2="268"/>
+    </g>
+    <use href="#monitor" transform="translate(212 196) rotate(-24 26 19) scale(.6)"/>
+    <use href="#box" transform="translate(180 222) rotate(22 23 16) scale(.6)"/>
+    <rect x="208" y="244" width="16" height="26" rx="3" fill="#2b2f33" transform="rotate(32 216 257)"/>
+    <rect x="211" y="248" width="10" height="16" rx="1" fill="#9fd6e8" transform="rotate(32 216 257)"/>
+    <rect x="150" y="238" width="28" height="20" rx="2" fill="#2e9a3d" transform="rotate(-18 164 248)"/>
+    <path d="M154 246 H172 M154 251 H168" stroke="#fff" stroke-width="2" transform="rotate(-18 164 248)"/>
+    <rect x="186" y="268" width="14" height="22" rx="3" fill="#e4572e" transform="rotate(40 193 279)"/>
+    <rect x="189" y="266" width="8" height="4" fill="#cfd5da" transform="rotate(40 193 279)"/>
+    <path d="M232 262 q8 -14 18 -2 t14 8" fill="none" stroke="#2b2f33" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- chassis -->
+  <rect x="240" y="270" width="430" height="22" rx="6" fill="#3b4045"/>
+
+  <!-- hydraulic piston -->
+  <line x1="440" y1="272" x2="478" y2="176" stroke="#2b2f33" stroke-width="10" stroke-linecap="round"/>
+  <line x1="455" y1="236" x2="478" y2="176" stroke="#cfd5da" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- tipping cargo bed -->
+  <g transform="rotate(-28 270 270)">
+    <rect x="270" y="150" width="250" height="120" rx="12" fill="#39B54A"/>
+    <rect x="270" y="150" width="250" height="20" rx="10" fill="#2e9a3d"/>
+    <rect x="292" y="182" width="8" height="78" rx="4" fill="#2e9a3d"/>
+    <rect x="490" y="182" width="8" height="78" rx="4" fill="#2e9a3d"/>
+    <!-- load peeking over the top -->
+    <use href="#monitor" transform="translate(290 118) scale(.85)"/>
+    <use href="#box" transform="translate(345 126) scale(.9)"/>
+    <use href="#monitor" transform="translate(400 120) scale(.75)"/>
+    <circle cx="395" cy="205" r="46" fill="#2e9a3d"/>
+    <g transform="translate(395 205) scale(.95)">
+      <use href="#arrow"/><use href="#arrow" transform="rotate(120)"/><use href="#arrow" transform="rotate(240)"/>
+    </g>
+    <text x="395" y="262" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="20" fill="#fff" letter-spacing="2">JR RECYCLING</text>
+  </g>
+
+  <!-- cab -->
+  <g transform="translate(113 0)">
+    <path d="M392 275 V140 a14 14 0 0 1 14-14 H478 a14 14 0 0 1 11 5 L545 200 a14 14 0 0 1 3 9 V275 Z" fill="#2e9a3d"/>
+    <path d="M410 146 H474 L520 205 H410 Z" fill="#dff3ff"/>
+    <path d="M410 146 H474 L486 162 H410 Z" fill="#fff" opacity=".35"/>
+    <rect x="528" y="236" width="20" height="14" rx="4" fill="#ffd54a"/>
+    <rect x="505" y="214" width="26" height="6" rx="3" fill="#1f7a2c"/>
+    <rect x="520" y="268" width="38" height="14" rx="5" fill="#3b4045"/>
+  </g>
+
+  <!-- wheels -->
+  <use href="#wheel" x="320" y="305"/>
+  <use href="#wheel" x="418" y="305"/>
+  <use href="#wheel" x="583" y="305"/>
+</svg>

@@ -92,6 +92,22 @@ function Footer() {
               </div>
               <p className=" text-white">jrrecyclingsolutionsltd@gmail.com</p>
             </Link>
+            <Link
+              href="mailto:info@jrrecyclingsolutionsltd.com.bd"
+              className="flex place-items-center cursor-pointer space-x-[10px]"
+            >
+              <div className="bg-[#39B54A] content-center flex  place-content-center place-items-center w-[40px] h-[40px] rounded-full">
+                <FontAwesomeIcon
+                  style={{
+                    height: "20px",
+                    width: "20px",
+                  }}
+                  color="white"
+                  icon={faEnvelope}
+                />
+              </div>
+              <p className=" text-white">info@jrrecyclingsolutionsltd.com.bd</p>
+            </Link>
           </div>
         </div>
         <div className="laptop:w-[15%] mobile:w-full flex flex-col">

@@ -24,7 +24,8 @@ function AboutUs() {
               alt=""
               height={400}
               width={400}
-              src="/services/green-truck.webp"
+              src="/services/green-truck-illustration.svg"
+              unoptimized
             />
           </Slide>
         </div>

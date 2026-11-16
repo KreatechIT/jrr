@@ -230,6 +230,9 @@ function ContactUs() {
                 <p className="font-lato text-[15px] ">
                   jrrecyclingsolutionsltd@gmail.com
                 </p>
+                <p className="font-lato text-[15px] ">
+                  info@jrrecyclingsolutionsltd.com.bd
+                </p>
               </div>
             </div>
           </div>
