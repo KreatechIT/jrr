@@ -93,7 +93,7 @@ function ContactUs() {
                 </div>
               </div>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116796.62062625769!2d90.36066845946345!3d23.822354055699876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0da425f190d%3A0x55a15bc8ccbb9487!2sJr%20Enterprise!5e0!3m2!1sen!2sbd!4v1680492844140!5m2!1sen!2sbd"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84361.93845481078!2d90.23614101705745!3d23.834624348673483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755eaeec192fb67%3A0x8c70fd0efcdc2848!2sJR%20Recycling%20Solutions%20Ltd%20-%20E%20Waste%20Recycling%20in%20Bangladesh!5e0!3m2!1sen!2sbd!4v1794984245577!5m2!1sen!2sbd"
                 width="565"
                 height="350"
                 className="h-[321px] mobile:w-full laptop:w-[565px]"
