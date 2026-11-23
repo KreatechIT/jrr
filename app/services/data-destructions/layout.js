@@ -1,23 +1,33 @@
 import React from "react";
 
+const TITLE = "Data Destruction Services in Bangladesh | JR Recycling";
+const DESCRIPTION =
+  "JR Recycling Solutions Ltd. offers secure data destruction services in Bangladesh, including HDD degaussing and data elimination for businesses";
+const URL = "https://jrrecyclingsolutionsltd.com.bd/services/data-destructions";
+
 export const metadata = {
-  title: "Data Destructions In Bangladesh | JR Recycling Solutions",
-  description:
-    "Protect your business with data destructions in Bangladesh by JR Recycling Solutions, including secure handling, disposal and responsible e-waste recycling.",
+  title: TITLE,
+  description: DESCRIPTION,
+  keywords: [
+    "Data Destruction Services in Bangladesh",
+    "Hard Drive Data Destruction in Bangladesh",
+    "Secure Data Destruction",
+    "HDD Degaussing Service in Bangladesh",
+    "Data Erasure Services",
+    "Corporate Data Destruction",
+    "Data Destruction Company in Bangladesh",
+  ],
   alternates: {
-    canonical:
-      "https://jrrecyclingsolutionsltd.com.bd/services/data-destructions",
+    canonical: URL,
   },
   openGraph: {
-    title: "Data Destructions In Bangladesh | JR Recycling Solutions",
-    description:
-      "Protect your business with data destructions in Bangladesh by JR Recycling Solutions, including secure handling, disposal and responsible e-waste recycling.",
-    url: "https://jrrecyclingsolutionsltd.com.bd/services/data-destructions",
+    title: TITLE,
+    description: DESCRIPTION,
+    url: URL,
   },
   twitter: {
-    title: "Data Destructions In Bangladesh | JR Recycling Solutions",
-    description:
-      "Protect your business with data destructions in Bangladesh by JR Recycling Solutions, including secure handling, disposal and responsible e-waste recycling.",
+    title: TITLE,
+    description: DESCRIPTION,
   },
 };
 
